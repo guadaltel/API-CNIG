@@ -9,7 +9,6 @@ const backgroundlayersOpts = backgroundlayersIds.map((id, index) => {
   };
 });
 
-
 const config = (configKey, configValue) => {
   config[configKey] = configValue;
 };
@@ -36,7 +35,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('MAPEA_URL', 'https://mapea-lite.desarrollo.guadaltel.es/api-core/');
+  M_.config('MAPEA_URL', 'https://api-idee-cnig.desarrollo.guadaltel.es/api-core/');
 
   /**
    * The path to the Mapea proxy to send
@@ -46,7 +45,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('PROXY_URL', location.protocol + '//mapea-lite.desarrollo.guadaltel.es/api-core/api/proxy');
+  M_.config('PROXY_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-core/api/proxy`);
 
   /**
    * The path to the Mapea proxy to send
@@ -56,7 +55,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('PROXY_POST_URL', location.protocol + '//mapea-lite.desarrollo.guadaltel.es/api-core/proxyPost');
+  M_.config('PROXY_POST_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-core/proxyPost`);
 
   /**
    * The path to the Mapea templates
@@ -74,7 +73,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('THEME_URL', location.protocol + '//mapea-lite.desarrollo.guadaltel.es/api-core/assets/');
+  M_.config('THEME_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-core/assets/`);
 
   /**
    * TODO
@@ -174,10 +173,9 @@ function fun(M_) {
   M_.config('attributions', {
     defaultAttribution: 'Instituto Geográfico Nacional',
     defaultURL: 'https://www.ign.es/',
-    url: 'https://mapea-lite.desarrollo.guadaltel.es/api-core/files/attributions/WMTS_PNOA_20170220/atribucionPNOA_Url.kml',
+    url: 'https://api-idee-cnig.desarrollo.guadaltel.es/api-core/files/attributions/WMTS_PNOA_20170220/atribucionPNOA_Url.kml',
     type: 'kml',
   });
-
 
   /**
    * Controls configuration
@@ -196,7 +194,6 @@ function fun(M_) {
    */
   M_.config('SQL_WASM_URL', '../../../../node_modules/sql.js/dist/');
 
-
   /**
    * Mueve el mapa cuando se hace clic sobre un objeto
    * geográfico, (extract = true) o no (extract = false)
@@ -213,16 +210,16 @@ function fun(M_) {
    * @type {object}
    */
   M_.config('POPUP_INTELLIGENCE', {
-      activate: true,
-      sizes: {
-        images: ['120px', '75px'],
-        videos: ['500px', '300px'],
-        documents: ['500px', '300px'],
-        audios: ['250px', '40px'],
-      }
+    activate: true,
+    sizes: {
+      images: ['120px', '75px'],
+      videos: ['500px', '300px'],
+      documents: ['500px', '300px'],
+      audios: ['250px', '40px'],
+    },
   });
 
-      /**
+  /**
    * Hace el dialog inteligente
    *
    * @private
@@ -235,7 +232,7 @@ function fun(M_) {
       videos: ['500px', '300px'],
       documents: ['500px', '300px'],
       audios: ['250px', '40px'],
-    }
+    },
   });
 }
 

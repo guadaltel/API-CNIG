@@ -80,7 +80,8 @@
     "karma": "karma start ./karma.conf.js",
     "prebuild": "node tasks/clean-build.js --path=dist && node tasks/generate-index.js",
     "postbuild": "npm run generate-doc && node tasks/copy-legacy.js",
-    "start": "webpack-dev-server --config=webpack-config/webpack.development.config.js",
+    "start-cnig": "webpack-dev-server --config=webpack-config/webpack.development.config.js",
+    "start-sigc": "webpack-dev-server --config=webpack-config/webpack.development.config.js",
     "start:build": "npm run build && npm run debug:build",
     "test": "npm run karma"
   }

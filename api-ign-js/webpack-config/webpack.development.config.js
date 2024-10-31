@@ -28,7 +28,22 @@ try {
   throw error;
 }
 
-const config = path.resolve(__dirname, '../test/configuration_filtered.js');
+let profile = false;
+
+if (process.env.npm_lifecycle_event === 'start-cnig') {
+  profile = 'cnig';
+}
+
+if (process.env.npm_lifecycle_event === 'start-sigc') {
+  profile = 'sigc';
+}
+
+if (profile === false) {
+  const error = new Error('Profile is undefined. Use: npm start-cnig or npm start-sigc');
+  throw error;
+}
+
+const config = path.resolve(__dirname, `../test/configuration_filtered_${profile}.js`);
 const entrypoint = {};
 entrypoint[testName] = testPath;
 entrypoint.config = config;
