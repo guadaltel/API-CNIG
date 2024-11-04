@@ -35,7 +35,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('MAPEA_URL', 'https://api-idee-cnig.desarrollo.guadaltel.es/api-core/');
+  M_.config('MAPEA_URL', 'https://api-idee-cnig.desarrollo.guadaltel.es/api-idee/');
 
   /**
    * The path to the Mapea proxy to send
@@ -45,7 +45,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('PROXY_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-core/api/proxy`);
+  M_.config('PROXY_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-idee/api/proxy`);
 
   /**
    * The path to the Mapea proxy to send
@@ -55,7 +55,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('PROXY_POST_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-core/proxyPost`);
+  M_.config('PROXY_POST_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-idee/proxyPost`);
 
   /**
    * The path to the Mapea templates
@@ -73,7 +73,7 @@ function fun(M_) {
    * @public
    * @api stable
    */
-  M_.config('THEME_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-core/assets/`);
+  M_.config('THEME_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-idee/assets/`);
 
   /**
    * TODO
@@ -173,7 +173,7 @@ function fun(M_) {
   M_.config('attributions', {
     defaultAttribution: 'Instituto Geográfico Nacional',
     defaultURL: 'https://www.ign.es/',
-    url: 'https://api-idee-cnig.desarrollo.guadaltel.es/api-core/files/attributions/WMTS_PNOA_20170220/atribucionPNOA_Url.kml',
+    url: 'https://api-idee-cnig.desarrollo.guadaltel.es/api-idee/files/attributions/WMTS_PNOA_20170220/atribucionPNOA_Url.kml',
     type: 'kml',
   });
 

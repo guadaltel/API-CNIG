@@ -13,7 +13,7 @@ RUN echo yes | keytool -importcert -file /tmp/catastro.cer -keystore /usr/local/
 RUN echo yes | keytool -importcert -file /tmp/fototeca.cer -keystore /usr/local/openjdk-8/jre/lib/security/cacerts -storepass changeit -alias "fototeca"
 RUN echo yes | keytool -importcert -file /tmp/almendralejo.cer -keystore /usr/local/openjdk-8/jre/lib/security/cacerts -storepass changeit -alias "almendralejo"
 
-ADD api-core.war $CATALINA_HOME/webapps/api-core.war
+ADD api-idee.war $CATALINA_HOME/webapps/api-idee.war
 RUN rm -rf $CATALINA_HOME/conf/server.xml
 ADD server.xml $CATALINA_HOME/conf/server.xml
 
