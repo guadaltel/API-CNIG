@@ -76,6 +76,13 @@
          <properties>
             <environment>sigc-desarrollo</environment>
          </properties>
+         <repositories>
+            <repository>
+               <id>ceic</id>
+               <name>Repositorio CEIC</name>
+               <url>http://www.juntadeandalucia.es/madeja/repositoriodelibrerias/ja-external</url>
+            </repository>
+         </repositories>
       </profile>
       <profile>
          <id>sigc-preproduccion</id>
@@ -85,6 +92,13 @@
          <properties>
             <environment>sigc-preproduccion</environment>
          </properties>
+         <repositories>
+            <repository>
+               <id>ceic</id>
+               <name>Repositorio CEIC</name>
+               <url>http://www.juntadeandalucia.es/madeja/repositoriodelibrerias/ja-external</url>
+            </repository>
+         </repositories>
       </profile>
       <profile>
          <id>sigc-produccion</id>
@@ -94,6 +108,13 @@
          <properties>
             <environment>sigc-produccion</environment>
          </properties>
+         <repositories>
+            <repository>
+               <id>ceic</id>
+               <name>Repositorio CEIC</name>
+               <url>http://www.juntadeandalucia.es/madeja/repositoriodelibrerias/ja-external</url>
+            </repository>
+         </repositories>
       </profile>
    </profiles>
    <build>
