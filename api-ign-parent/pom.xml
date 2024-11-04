@@ -69,21 +69,30 @@
         </properties>
      </profile>
       <profile>
-         <id>desarrollo</id>
+         <id>sigc-desarrollo</id>
          <activation>
             <activeByDefault>false</activeByDefault>
          </activation>
          <properties>
-            <environment>desarrollo</environment>
+            <environment>sigc-desarrollo</environment>
          </properties>
       </profile>
       <profile>
-         <id>produccion</id>
+         <id>sigc-preproduccion</id>
          <activation>
-            <activeByDefault>true</activeByDefault>
+            <activeByDefault>false</activeByDefault>
          </activation>
          <properties>
-            <environment>produccion</environment>
+            <environment>sigc-preproduccion</environment>
+         </properties>
+      </profile>
+      <profile>
+         <id>sigc-produccion</id>
+         <activation>
+            <activeByDefault>false</activeByDefault>
+         </activation>
+         <properties>
+            <environment>sigc-produccion</environment>
          </properties>
       </profile>
    </profiles>
