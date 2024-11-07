@@ -111,7 +111,7 @@
         });
 
         const pluginShareMap = new M.plugin.ShareMap({
-            baseUrl: 'https://componentes.ign.es/api-core/',
+            baseUrl: `${M.config.MAPEA_URL}`,
             position: 'BR',
         });
 

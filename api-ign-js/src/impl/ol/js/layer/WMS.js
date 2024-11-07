@@ -141,7 +141,7 @@ class WMS extends LayerBase {
      * WMS numZoomLevels. Número de niveles de zoom.
      */
     if (isNullOrEmpty(this.options.numZoomLevels)) {
-      this.options.numZoomLevels = 20; // by default
+      this.options.numZoomLevels = M.config.ZOOM_LEVELS; // by default
     }
 
     /**
@@ -289,7 +289,7 @@ class WMS extends LayerBase {
     }
 
     if (!this.isWMSfull
-      && this.legendUrl_ === concatUrlPaths([M.config.THEME_URL, FacadeLayerBase.LEGEND_DEFAULT])) {
+      && this.legendUrl_ === concatUrlPaths([`${M.config.MAPEA_URL}assets/`, FacadeLayerBase.LEGEND_DEFAULT])) {
       this.legendUrl_ = addParameters(this.url, {
         SERVICE: 'WMS',
         VERSION: this.version,

@@ -185,7 +185,7 @@ export default class Layer extends MObject {
    * @expose
    */
   getLegendURL() {
-    return concatUrlPaths([MConfig.THEME_URL, FacadeLayer.LEGEND_DEFAULT]);
+    return concatUrlPaths([`${M.config.MAPEA_URL}assets/`, FacadeLayer.LEGEND_DEFAULT]);
   }
 
   /**
@@ -206,7 +206,7 @@ export default class Layer extends MObject {
    * @api stable
    */
   getNumZoomLevels() {
-    return 20; // 20 zoom levels by default
+    return M.config.ZOOM_LEVELS;
   }
 
   /**

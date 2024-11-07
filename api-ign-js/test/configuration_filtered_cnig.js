@@ -67,15 +67,6 @@ function fun(M_) {
   M_.config('TEMPLATES_PATH', '/files/templates/');
 
   /**
-   * The path to the Mapea theme
-   * @const
-   * @type {string}
-   * @public
-   * @api stable
-   */
-  M_.config('THEME_URL', `${location.protocol}//api-idee-cnig.desarrollo.guadaltel.es/api-idee/assets/`);
-
-  /**
    * TODO
    * @type {object}
    * @public

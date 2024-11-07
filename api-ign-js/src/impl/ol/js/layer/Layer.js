@@ -77,7 +77,7 @@ class LayerBase extends MObject {
     /**
      * Layer legendUrl_. Leyenda URL de esta capa.
      */
-    this.legendUrl_ = concatUrlPaths([M.config.THEME_URL, FacadeLayer.LEGEND_DEFAULT]);
+    this.legendUrl_ = concatUrlPaths([`${M.config.MAPEA_URL}assets/`, FacadeLayer.LEGEND_DEFAULT]);
 
     /**
      * Layer minZoom. Zoom mínimo aplicable a la capa.
@@ -379,12 +379,12 @@ class LayerBase extends MObject {
    * Este método obtiene los niveles de zoom numéricos.
    *
    * @public
-   * @returns {Number} Devuelve la resolución máxima (20).
+   * @returns {Number} Devuelve la resolución máxima.
    * @function
    * @api stable
    */
   getNumZoomLevels() {
-    return this.numZoomLevels || 20; // 20 zoom levels by default
+    return this.numZoomLevels || M.config.ZOOM_LEVELS;
   }
 
   /**

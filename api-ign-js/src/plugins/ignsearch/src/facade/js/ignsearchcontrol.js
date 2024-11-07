@@ -1093,14 +1093,14 @@ export default class IGNSearchControl extends M.Control {
       this.point = new M.style.Point({
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([M.config.THEME_URL, '/img/pinign.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/pinign.svg']),
         },
       });
     } else if (this.pointStyle === 'pinMorado') {
       this.point = new M.style.Point({
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([M.config.THEME_URL, '/img/m-pin-24.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/m-pin-24.svg']),
         },
       });
     }

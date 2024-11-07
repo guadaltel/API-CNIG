@@ -35,11 +35,6 @@ public class ActionsWS {
 	private ResourceBundle versionProperties = ResourceBundle.getBundle("version");
 	private ResourceBundle configProperties = ResourceBundle.getBundle("configuration");
 
-	/*
-	 * # services services=${services} # theme theme.urls=${theme.urls}
-	 * theme.names=${theme.names} # projection projection=${mapea.proj.default}
-	 */
-
 	/**
 	 * The available actions the user can execute
 	 * 
@@ -54,7 +49,6 @@ public class ActionsWS {
 		actions.put("/controls");
 		actions.put("/services");
 		actions.put("/version");
-		actions.put("/themes");
 		actions.put("/projection");
 		actions.put("/plugins");
 		actions.put("/resources/svg");
@@ -108,28 +102,6 @@ public class ActionsWS {
 		}
 
 		return JSBuilder.wrapCallback(servicesJSON, callbackFn);
-	}
-
-	/**
-	 * Returns the available themes for the user
-	 * 
-	 * @param callbackFn the name of the javascript function to execute as callback
-	 * 
-	 * @return the javascript code
-	 */
-	@GET
-	@Path("/themes")
-	public String showAvailableThemes(@QueryParam("callback") String callbackFn) {
-		String themesRaw = configProperties.getString("themes");
-		String[] themes = themesRaw.split(",");
-
-		JSONArray themesJSON = new JSONArray();
-
-		for (String theme : themes) {
-			themesJSON.put(theme);
-		}
-
-		return JSBuilder.wrapCallback(themesJSON, callbackFn);
 	}
 
 	/**

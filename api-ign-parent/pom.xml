@@ -33,12 +33,21 @@
    </developers>
    <profiles>
      <profile>
-        <id>local</id>
+        <id>cnig-local</id>
         <activation>
            <activeByDefault>false</activeByDefault>
         </activation>
         <properties>
-           <environment>local</environment>
+           <environment>cnig-local</environment>
+        </properties>
+     </profile>
+      <profile>
+        <id>sigc-local</id>
+        <activation>
+           <activeByDefault>false</activeByDefault>
+        </activation>
+        <properties>
+           <environment>sigc-local</environment>
         </properties>
      </profile>
      <profile>

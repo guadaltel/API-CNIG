@@ -2019,7 +2019,7 @@ class Map extends MObject {
    */
   addControls(controls) {
     controls.forEach((control) => {
-      if (control instanceof FacadePanzoombar) {
+      if (M.config.controls.default) {
         this.facadeMap_.addControls(M.config.controls.default.split(','));
       }
       if (!includes(this.controls_, control)) {
@@ -2745,7 +2745,7 @@ class Map extends MObject {
     // let resolutions = [];
 
     // // zoom levels
-    // let zoomLevels = 20;
+    // let zoomLevels = 20; // Añadir M.config.ZOOM_LEVELS
 
     // // units
     // const units = this.getProjection().units;

@@ -105,23 +105,6 @@ params.forEach((param) => {
   M.config('TEMPLATES_PATH', '${mapea.templates.path}');
 
   /**
-   * The path to the Mapea theme
-   * @const
-   * @type {string}
-   * @public
-   * @api stable
-   */
-  M.config('THEME_URL', `${(location.protocol !== 'file' && location.protocol !== 'file:') ? location.protocol : 'https:'}\${mapea.theme.url}`);
-
-  /**
-   * The path to the Mapea theme
-   * @const
-   * @type {string}
-   * @public
-   * @api stable
-   */
-
-  /**
    * TODO
    * @type {object}
    * @public
@@ -180,8 +163,8 @@ params.forEach((param) => {
    * @private
    * @type {object}
    */
-  M.config('tms', {
-    base: '${tms.base}',
+  M.config('baseLayer', {
+    base: '${baseLayer}',
   });
 
   /**

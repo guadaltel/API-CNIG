@@ -47,7 +47,6 @@ public class Proxy {
 	private static final String AUTHORIZATION = "Authorization";
 	public ServletContext context_ = null;
 	private static ResourceBundle configProperties = ResourceBundle.getBundle("configuration");
-	private static final String THEME_URL = configProperties.getString("mapea.theme.url");
 	private static final String LEGEND_ERROR = "/img/legend-error.png";
 	private static final int IMAGE_MAX_BYTE_SIZE = Integer.parseInt(configProperties.getString("max.image.size"));
 

@@ -281,7 +281,7 @@ class Map extends Base {
 
     // default TMS
     if (isNullOrEmpty(params.layers) && !isArray(params.layers)) {
-      this.addQuickLayers(M.config.tms.base);
+      this.addQuickLayers(M.config.baseLayer);
     }
 
     // center

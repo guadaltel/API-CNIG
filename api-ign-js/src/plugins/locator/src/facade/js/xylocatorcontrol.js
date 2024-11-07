@@ -313,7 +313,7 @@ export default class XYLocatorControl extends M.Control {
       style = {
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([M.config.THEME_URL, '/img/marker.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/marker.svg']),
           scale: 1.4,
           fill: {
             color: '#71a7d3',
@@ -329,14 +329,14 @@ export default class XYLocatorControl extends M.Control {
       style = {
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([M.config.THEME_URL, '/img/pinign.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/pinign.svg']),
         },
       };
     } else if (this.pointStyle === 'pinMorado') {
       style = {
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([M.config.THEME_URL, '/img/m-pin-24.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/m-pin-24.svg']),
         },
       };
     }

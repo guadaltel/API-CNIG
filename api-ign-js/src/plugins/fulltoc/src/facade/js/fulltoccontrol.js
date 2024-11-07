@@ -827,7 +827,7 @@ export default class FullTOCControl extends M.Control {
         const layerName = evt.target.getAttribute('data-layer-name');
         const layerURL = evt.target.getAttribute('data-layer-url');
         const legendErrorUrl = M.utils.concatUrlPaths([
-          M.config.THEME_URL,
+          `${M.config.MAPEA_URL}assets/`,
           M.layer.WMS.LEGEND_ERROR,
         ]);
 

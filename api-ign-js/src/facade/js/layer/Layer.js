@@ -555,7 +555,7 @@ class LayerBase extends Base {
   setLegendURL(legendUrlParam) {
     let legendUrl = legendUrlParam;
     if (isNullOrEmpty(legendUrl)) {
-      legendUrl = concatUrlPaths([M.config.THEME_URL, LayerBase.LEGEND_DEFAULT]);
+      legendUrl = concatUrlPaths([`${M.config.MAPEA_URL}assets/`, LayerBase.LEGEND_DEFAULT]);
     }
     this.getImpl().setLegendURL(legendUrl);
   }
