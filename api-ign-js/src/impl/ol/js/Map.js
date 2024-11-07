@@ -7,7 +7,6 @@ import OLFormatWMTSCapabilities from 'ol/format/WMTSCapabilities';
 import OLProjection from 'ol/proj/Projection';
 import OLInteraction from 'ol/interaction/Interaction';
 import MObject from 'M/Object';
-import FacadePanzoombar from 'M/control/Panzoombar';
 import * as LayerType from 'M/layer/Type';
 import 'impl-assets/css/ol';
 import 'impl-assets/css/custom';
