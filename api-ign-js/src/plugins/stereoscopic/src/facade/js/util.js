@@ -1,4 +1,4 @@
-const urlAPI = `${M.config.MAPEA_URL}plugins/stereoscopic/`;
+const urlAPI = `${M.config.IDEE_URL}plugins/stereoscopic/`;
 
 function loadAllScripts() {
   return new Promise((resolve1, reject1) => {

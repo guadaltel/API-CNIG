@@ -71,7 +71,7 @@ export default class StereoscopicControl extends M.Control {
             linkGlass: getValue('linkGlass'),
             maxMagnification: this.maxMaginification,
           },
-          url: `${M.config.MAPEA_URL}plugins/stereoscopic/images/docStereo.pdf`,
+          url: `${M.config.IDEE_URL}plugins/stereoscopic/images/docStereo.pdf`,
         },
       });
       this.addEvent(html, this.map_);
@@ -133,7 +133,7 @@ export default class StereoscopicControl extends M.Control {
     const newScript = document.createElement('script');
     newScript.type = 'module';
 
-    const url = `${M.config.MAPEA_URL}plugins/stereoscopic/`;
+    const url = `${M.config.IDEE_URL}plugins/stereoscopic/`;
 
     const inlineScript = document.createTextNode(` const TR3cfg = new Array();
 

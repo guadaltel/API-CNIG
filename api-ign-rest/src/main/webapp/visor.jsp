@@ -111,7 +111,7 @@
         });
 
         const pluginShareMap = new M.plugin.ShareMap({
-            baseUrl: `${M.config.MAPEA_URL}`,
+            baseUrl: `${M.config.IDEE_URL}`,
             position: 'BR',
         });
 

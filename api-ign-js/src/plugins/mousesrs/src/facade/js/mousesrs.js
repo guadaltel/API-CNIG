@@ -310,7 +310,7 @@ export default class MouseSRS extends M.Plugin {
       content: new Promise((success) => {
         const html = M.template.compileSync(myhelp, {
           vars: {
-            urlImages: `${M.config.MAPEA_URL}plugins/mousesrs/images/`,
+            urlImages: `${M.config.IDEE_URL}plugins/mousesrs/images/`,
             translations: {
               help1: getValue('textHelp.help1'),
               help2: getValue('textHelp.help2'),

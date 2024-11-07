@@ -114,7 +114,7 @@
     {
       id: "mapa",
       preview:
-      `${M.config.MAPEA_URL}/plugins/backimglayer/images/svqmapa.png`,
+      `${M.config.IDEE_URL}/plugins/backimglayer/images/svqmapa.png`,
       title: "Mapa",
       layers: [
         new M.layer.WMTS({
@@ -134,7 +134,7 @@
       id: "imagen",
       title: "Imagen",
       preview:
-      `${M.config.MAPEA_URL}/plugins/backimglayer/images/svqimagen.png`,
+      `${M.config.IDEE_URL}/plugins/backimglayer/images/svqimagen.png`,
       layers: [
         new M.layer.WMTS({
           url: "http://www.ign.es/wmts/pnoa-ma?",
@@ -152,7 +152,7 @@
     {
       id: "lidar",
       preview:
-      `${M.config.MAPEA_URL}/plugins/backimglayer/images/svqlidar.png`,
+      `${M.config.IDEE_URL}/plugins/backimglayer/images/svqlidar.png`,
       title: "LIDAR",
       layers: [
         new M.layer.WMTS({
@@ -172,7 +172,7 @@
       id: "hibrido",
       title: "Híbrido",
       preview:
-      `${M.config.MAPEA_URL}/plugins/backimglayer/images/svqhibrid.png`,
+      `${M.config.IDEE_URL}/plugins/backimglayer/images/svqhibrid.png`,
       layers: [
         new M.layer.WMTS({
           url: "http://www.ign.es/wmts/pnoa-ma?",

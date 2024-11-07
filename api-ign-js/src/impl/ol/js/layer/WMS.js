@@ -289,7 +289,7 @@ class WMS extends LayerBase {
     }
 
     if (!this.isWMSfull
-      && this.legendUrl_ === concatUrlPaths([`${M.config.MAPEA_URL}assets/`, FacadeLayerBase.LEGEND_DEFAULT])) {
+      && this.legendUrl_ === concatUrlPaths([`${M.config.IDEE_URL}assets/`, FacadeLayerBase.LEGEND_DEFAULT])) {
       this.legendUrl_ = addParameters(this.url, {
         SERVICE: 'WMS',
         VERSION: this.version,

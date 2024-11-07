@@ -732,7 +732,7 @@ export default class IncicartoControl extends M.Control {
     };
 
     const emailForm = document.querySelector('#m-plugin-incicarto-email-form');
-    emailForm.action = `${M.config.MAPEA_URL}api/email`;
+    emailForm.action = `${M.config.IDEE_URL}api/email`;
     document.querySelector('#m-plugin-incicarto-email-subject').value = emailSubject;
     document.querySelector('#m-plugin-incicarto-email-mailto').value = destinatary;
     document.querySelector('#m-plugin-incicarto-email-sendergeometry').value = JSON.stringify(this.geometryIncidenceJSON);
@@ -758,7 +758,7 @@ export default class IncicartoControl extends M.Control {
     const errDescription = document.querySelector('#err-description').value;
 
     let url = window.location.href;
-    let apiUrl = M.config.MAPEA_URL;
+    let apiUrl = M.config.IDEE_URL;
     let onlyURL = false;
 
     const { x, y } = this.map_.getCenter();
@@ -1082,7 +1082,7 @@ export default class IncicartoControl extends M.Control {
 
     try {
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', `${M.config.MAPEA_URL}api/email`);
+      xhr.open('POST', `${M.config.IDEE_URL}api/email`);
       xhr.onload = callback;
       const formData = new FormData(emailForm);
       xhr.send(formData);

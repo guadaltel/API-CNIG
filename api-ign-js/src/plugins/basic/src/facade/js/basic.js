@@ -183,7 +183,7 @@ export default class Basic extends M.Plugin {
       content: new Promise((success) => {
         const html = M.template.compileSync(myhelp, {
           vars: {
-            urlImages: `${M.config.MAPEA_URL}plugins/basic/images/`,
+            urlImages: `${M.config.IDEE_URL}plugins/basic/images/`,
             translations: {
               help1: getValue('textHelp.help1'),
               help2: getValue('textHelp.help2'),

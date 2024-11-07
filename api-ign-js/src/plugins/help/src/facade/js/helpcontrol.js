@@ -136,11 +136,11 @@ export default class HelpControl extends M.Control {
       const html = M.template.compileSync(helps, {
         parseToHtml: false,
         vars: {
-          library: `${M.config.MAPEA_URL}js/print.min.js`,
+          library: `${M.config.IDEE_URL}js/print.min.js`,
           headerImages: this.headerImages,
-          downloadPDFimg: `${M.config.MAPEA_URL}img/file-pdf.svg`,
-          zoom1: `${M.config.MAPEA_URL}img/magnify_on.svg`,
-          zoom2: `${M.config.MAPEA_URL}img/magnify_off.svg`,
+          downloadPDFimg: `${M.config.IDEE_URL}img/file-pdf.svg`,
+          zoom1: `${M.config.IDEE_URL}img/magnify_on.svg`,
+          zoom2: `${M.config.IDEE_URL}img/magnify_off.svg`,
           translations: {
             header: getValue('short_title'),
             pdf: getValue('pdf'),

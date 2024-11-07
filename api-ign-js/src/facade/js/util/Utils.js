@@ -259,7 +259,7 @@ export const getWMSGetCapabilitiesUrl = (serverUrl, version) => {
   // service
   wmsGetCapabilitiesUrl = addParameters(wmsGetCapabilitiesUrl, 'service=WMS');
 
-  // PATCH: En mapea 3 no se manda luego aquí tampoco. Hay servicios que dan error....
+  // PATCH: En IDEE 3 no se manda luego aquí tampoco. Hay servicios que dan error....
   //       version
   wmsGetCapabilitiesUrl = addParameters(wmsGetCapabilitiesUrl, {
     version,

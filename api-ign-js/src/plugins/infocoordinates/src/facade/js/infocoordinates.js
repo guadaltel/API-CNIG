@@ -248,7 +248,7 @@ export default class Infocoordinates extends M.Plugin {
       content: new Promise((success) => {
         const html = M.template.compileSync(myhelp, {
           vars: {
-            urlImages: `${M.config.MAPEA_URL}plugins/infocoordinates/images/`,
+            urlImages: `${M.config.IDEE_URL}plugins/infocoordinates/images/`,
             translations: {
               help1: getValue('textHelp.help1'),
               help2: getValue('textHelp.help2'),

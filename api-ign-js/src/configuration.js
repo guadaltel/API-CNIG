@@ -67,42 +67,42 @@ params.forEach((param) => {
   M.config('MOBILE_WIDTH', '${mobile.width}');
 
   /**
-   * The Mapea URL
+   * The IDEE URL
    * @const
    * @type {string}
    * @public
    * @api stable
    */
-  M.config('MAPEA_URL', '${mapea.url}');
+  M.config('IDEE_URL', '${idee.url}');
 
   /**
-   * The path to the Mapea proxy to send
+   * The path to the IDEE proxy to send
    * jsonp requests
    * @const
    * @type {string}
    * @public
    * @api stable
    */
-  M.config('PROXY_URL', `${(location.protocol !== 'file' && location.protocol !== 'file:') ? location.protocol : 'https:'}\${mapea.proxy.url}`);
+  M.config('PROXY_URL', `${(location.protocol !== 'file' && location.protocol !== 'file:') ? location.protocol : 'https:'}\${idee.proxy.url}`);
 
   /**
-   * The path to the Mapea proxy to send
+   * The path to the IDEE proxy to send
    * jsonp requests
    * @const
    * @type {string}
    * @public
    * @api stable
    */
-  M.config('PROXY_POST_URL', `${(location.protocol !== 'file' && location.protocol !== 'file:') ? location.protocol : 'https:'}\${mapea.proxy_post.url}`);
+  M.config('PROXY_POST_URL', `${(location.protocol !== 'file' && location.protocol !== 'file:') ? location.protocol : 'https:'}\${idee.proxy_post.url}`);
 
   /**
-   * The path to the Mapea templates
+   * The path to the IDEE templates
    * @const
    * @type {string}
    * @public
    * @api stable
    */
-  M.config('TEMPLATES_PATH', '${mapea.templates.path}');
+  M.config('TEMPLATES_PATH', '${idee.templates.path}');
 
   /**
    * TODO
@@ -155,7 +155,7 @@ params.forEach((param) => {
    * @public
    * @api stable
    */
-  M.config('DEFAULT_PROJ', '${mapea.proj.default}');
+  M.config('DEFAULT_PROJ', '${idee.proj.default}');
 
   /**
    * TMS configuration

@@ -60,7 +60,7 @@ export const compileSync = (string, options) => {
 const getTemplateUrl = (templatePath) => {
   let templateUrl = null;
   if (!isNullOrEmpty(templatePath)) {
-    templateUrl = M.config.MAPEA_URL.concat(M.config.TEMPLATES_PATH);
+    templateUrl = M.config.IDEE_URL.concat(M.config.TEMPLATES_PATH);
     templateUrl = templateUrl.concat(templatePath);
   }
   return templateUrl;

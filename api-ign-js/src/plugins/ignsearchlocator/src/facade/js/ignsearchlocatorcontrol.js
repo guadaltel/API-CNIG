@@ -664,7 +664,7 @@ export default class IGNSearchLocatorControl extends M.Control {
       this.reverseActivated = true;
       document.querySelector('#m-ignsearchlocator-locate-button span').style.color = '#71a7d3';
       document.addEventListener('keyup', this.checkEscKey.bind(this));
-      document.getElementsByTagName('body')[0].style.cursor = `url(${M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/pushpin.svg'])}) 0 20, auto`;
+      document.getElementsByTagName('body')[0].style.cursor = `url(${M.utils.concatUrlPaths([`${M.config.IDEE_URL}assets/`, '/img/pushpin.svg'])}) 0 20, auto`;
     } else {
       this.reverseActivated = false;
       document.querySelector('#m-ignsearchlocator-locate-button span').style.color = '#7A7A73';
@@ -2340,7 +2340,7 @@ export default class IGNSearchLocatorControl extends M.Control {
       this.point = new M.style.Point({
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/marker.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.IDEE_URL}assets/`, '/img/marker.svg']),
           scale: 1.4,
           fill: {
             color: '#71a7d3',
@@ -2356,14 +2356,14 @@ export default class IGNSearchLocatorControl extends M.Control {
       this.point = new M.style.Point({
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/pinign.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.IDEE_URL}assets/`, '/img/pinign.svg']),
         },
       });
     } else if (this.pointStyle === 'pinMorado') {
       this.point = new M.style.Point({
         radius: 5,
         icon: {
-          src: M.utils.concatUrlPaths([`${M.config.MAPEA_URL}assets/`, '/img/m-pin-24.svg']),
+          src: M.utils.concatUrlPaths([`${M.config.IDEE_URL}assets/`, '/img/m-pin-24.svg']),
         },
       });
     }

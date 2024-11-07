@@ -185,7 +185,7 @@ export default class Layer extends MObject {
    * @expose
    */
   getLegendURL() {
-    return concatUrlPaths([`${M.config.MAPEA_URL}assets/`, FacadeLayer.LEGEND_DEFAULT]);
+    return concatUrlPaths([`${M.config.IDEE_URL}assets/`, FacadeLayer.LEGEND_DEFAULT]);
   }
 
   /**

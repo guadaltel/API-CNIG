@@ -63,7 +63,7 @@ export default class Help extends M.Plugin {
      * @private
      * @type {Array}
      */
-    this.headerImages_ = header.images ? header.images : [`${M.config.MAPEA_URL}img/logo_ge.svg`, `${M.config.MAPEA_URL}img/ign.svg`];
+    this.headerImages_ = header.images ? header.images : [`${M.config.IDEE_URL}img/logo_ge.svg`, `${M.config.IDEE_URL}img/ign.svg`];
 
     /**
      * Título
@@ -162,7 +162,7 @@ export default class Help extends M.Plugin {
    * @api stable
    */
   addTo(map) {
-    M.remote.get(`${M.config.MAPEA_URL}api/actions/controls`).then((response) => {
+    M.remote.get(`${M.config.IDEE_URL}api/actions/controls`).then((response) => {
       const controls = response.text.replace('[', '').replace(']', '').replaceAll('"', '').split(',');
       this.ctrl = new HelpControl({
         tooltip: this.tooltip_,
@@ -246,7 +246,7 @@ export default class Help extends M.Plugin {
       content: new Promise((success) => {
         const html = M.template.compileSync(myhelp, {
           vars: {
-            urlImages: `${M.config.MAPEA_URL}plugins/help/images/`,
+            urlImages: `${M.config.IDEE_URL}plugins/help/images/`,
             translations: {
               help1: getValue('textHelp.help1'),
               help2: getValue('textHelp.help2'),

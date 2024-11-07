@@ -292,7 +292,7 @@ class BackgroundLayers extends ControlBase {
       content: new Promise((success) => {
         const html = compileTemplate(myhelp, {
           vars: {
-            urlImages: `${M.config.MAPEA_URL}assets/images`,
+            urlImages: `${M.config.IDEE_URL}assets/images`,
             translations: {
               help1: textHelp.text1,
             },

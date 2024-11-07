@@ -214,7 +214,7 @@ export default class Comparators extends M.Plugin {
       content: new Promise((success) => {
         const html = M.template.compileSync(myhelp, {
           vars: {
-            urlImages: `${M.config.MAPEA_URL}plugins/comparators/images/`,
+            urlImages: `${M.config.IDEE_URL}plugins/comparators/images/`,
             translations: {
               help1: getValue('textHelp.help1'),
               help2: getValue('textHelp.help2'),

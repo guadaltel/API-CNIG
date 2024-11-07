@@ -77,7 +77,7 @@ class LayerBase extends MObject {
     /**
      * Layer legendUrl_. Leyenda URL de esta capa.
      */
-    this.legendUrl_ = concatUrlPaths([`${M.config.MAPEA_URL}assets/`, FacadeLayer.LEGEND_DEFAULT]);
+    this.legendUrl_ = concatUrlPaths([`${M.config.IDEE_URL}assets/`, FacadeLayer.LEGEND_DEFAULT]);
 
     /**
      * Layer minZoom. Zoom mínimo aplicable a la capa.

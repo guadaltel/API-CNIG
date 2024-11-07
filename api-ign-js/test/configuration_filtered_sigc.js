@@ -29,16 +29,16 @@ function fun(M_) {
   M_.config('MOBILE_WIDTH', 768);
 
   /**
-   * The Mapea URL
+   * The IDEE URL
    * @const
    * @type {string}
    * @public
    * @api stable
    */
-  M_.config('MAPEA_URL', 'https://api-idee-sigc.desarrollo.guadaltel.es/api-idee/');
+  M_.config('IDEE_URL', 'https://api-idee-sigc.desarrollo.guadaltel.es/api-idee/');
 
   /**
-   * The path to the Mapea proxy to send
+   * The path to the IDEE proxy to send
    * jsonp requests
    * @const
    * @type {string}
@@ -48,7 +48,7 @@ function fun(M_) {
   M_.config('PROXY_URL', `${location.protocol}//api-idee-sigc.desarrollo.guadaltel.es/api-idee/api/proxy`);
 
   /**
-   * The path to the Mapea proxy to send
+   * The path to the IDEE proxy to send
    * jsonp requests
    * @const
    * @type {string}
@@ -58,7 +58,7 @@ function fun(M_) {
   M_.config('PROXY_POST_URL', `${location.protocol}//api-idee-sigc.desarrollo.guadaltel.es/api-idee/proxyPost`);
 
   /**
-   * The path to the Mapea templates
+   * The path to the IDEE templates
    * @const
    * @type {string}
    * @public

@@ -2366,7 +2366,7 @@ class Map extends Base {
                   className: 'm-plugin-baselayer',
                 });
               } else {
-                const getControlsAvailable = concatUrlPaths([M.config.MAPEA_URL, '/api/actions/controls']);
+                const getControlsAvailable = concatUrlPaths([M.config.IDEE_URL, '/api/actions/controls']);
                 Dialog.error(`El control ${controlParam} no está definido. Consulte los controles disponibles <a href='${getControlsAvailable}' target="_blank">aquí</a>`);
               }
           }

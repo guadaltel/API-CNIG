@@ -480,7 +480,7 @@ export default class WindowSyncControl extends M.Control {
    */
   getScriptAndLink(type) {
     const attr = type === 'link' ? 'href' : 'src';
-    let elements = [...document.querySelectorAll(`${type}[${attr}*="${M.config.MAPEA_URL}"]`)];
+    let elements = [...document.querySelectorAll(`${type}[${attr}*="${M.config.IDEE_URL}"]`)];
     if (elements.length === 0) {
       elements = this.getAPIRestScriptAndLink(type, attr);
     }
@@ -535,7 +535,7 @@ export default class WindowSyncControl extends M.Control {
     const script = this.getScriptAndLink('script').some((s) => s.includes(`${name.toLowerCase()}.ol.min.js`));
 
     const currentUrl = window.location.href;
-    if (currentUrl.includes('comparators') && (currentUrl.includes(M.config.MAPEA_URL))) {
+    if (currentUrl.includes('comparators') && (currentUrl.includes(M.config.IDEE_URL))) {
       this.pluginScriptAndLinkAPI(style, script, name.toLowerCase());
     } else {
       handlerErrorURLWindowSync(style, script, name);

@@ -237,7 +237,7 @@ export default class MeasureBar extends M.Plugin {
       content: new Promise((success) => {
         const html = M.template.compileSync(myhelp, {
           vars: {
-            urlImages: `${M.config.MAPEA_URL}plugins/measurebar/images/`,
+            urlImages: `${M.config.IDEE_URL}plugins/measurebar/images/`,
             translations: {
               help1: getValue('textHelp.help1'),
               help2: getValue('textHelp.help2'),

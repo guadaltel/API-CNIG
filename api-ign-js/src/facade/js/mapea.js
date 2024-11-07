@@ -161,7 +161,7 @@ let quickLayers = () => {
         name: 'PNOA-MA',
         description: 'IGN',
         url: 'https://www.ign.es',
-        contentAttributions: `${M.config.MAPEA_URL}files/attributions/WMTS_PNOA_20170220/atribucionPNOA_Url.kml`,
+        contentAttributions: `${M.config.IDEE_URL}files/attributions/WMTS_PNOA_20170220/atribucionPNOA_Url.kml`,
         contentType: 'kml',
       },
     }, {
