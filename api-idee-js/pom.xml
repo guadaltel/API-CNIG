@@ -2,9 +2,9 @@
    <modelVersion>4.0.0</modelVersion>
    <artifactId>api-idee-js</artifactId>
    <packaging>pom</packaging>
-   <name>API IGN JS</name>
+   <name>API IDEE JS</name>
    <parent>
-     <groupId>es.ign.api</groupId>
+     <groupId>es.idee.api</groupId>
       <artifactId>api-idee-parent</artifactId>
       <version>1.0.0</version>
       <relativePath>../api-idee-parent/pom.xml</relativePath>

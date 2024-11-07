@@ -298,7 +298,7 @@ public class DatabaseRepositoryImpl implements DatabaseRepository {
 				((HikariDataSource)datasource).setReadOnly(false);
 				conn = datasource.getConnection();
 				createGeojsonTable(conn, tabla);
-				insertsGeojsonForeignTable(new JSONObject(layer), conn, tabla);
+				insertsGeojsonForeideeTable(new JSONObject(layer), conn, tabla);
 				result = getLayerFiltered(conn, tabla, params, paginacion);
 			}catch(SQLException e){
 				e.printStackTrace();
@@ -1018,7 +1018,7 @@ public class DatabaseRepositoryImpl implements DatabaseRepository {
 		conn.prepareStatement(query).executeUpdate();
 	}
 	
-	private void insertsGeojsonForeignTable(JSONObject geojson, Connection conn, String tabla) throws SQLException{
+	private void insertsGeojsonForeideeTable(JSONObject geojson, Connection conn, String tabla) throws SQLException{
 		JSONArray features = geojson.getJSONArray("features");
 		for(int i = 0; i < features.length(); i++){
 			insertFeature(conn, tabla, features.getJSONObject(i));

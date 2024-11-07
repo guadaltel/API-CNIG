@@ -1,5 +1,5 @@
 /**
- * IGN API
+ * IDEE API
  * Version ${pom.version}
  * Date ${build.timestamp}
  */

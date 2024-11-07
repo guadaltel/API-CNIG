@@ -13,7 +13,7 @@
                     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                     <meta name="idee" content="yes">
                     <title>Visor base</title>
-                    <link type="text/css" rel="stylesheet" href="assets/css/apiign.ol.min.css">
+                    <link type="text/css" rel="stylesheet" href="assets/css/apiidee.ol.min.css">
                     <link href="plugins/comparators/comparators.ol.min.css" rel="stylesheet" />
                     <!-- Necesario para compartir los plugins en el mapa -->
                     <link href="plugins/beautytoc/beautytoc.ol.min.css" rel="stylesheet" />
@@ -239,7 +239,7 @@
                     <div id="mapjs" class="m-container"></div>
 
                     <script type="text/javascript" src="vendor/browser-polyfill.js"></script>
-                    <script type="text/javascript" src="js/apiign.ol.min.js"></script>
+                    <script type="text/javascript" src="js/apiidee.ol.min.js"></script>
                     <script type="text/javascript" src="js/configuration.js"></script>
                     <script type="text/javascript" src="plugins/comparators/comparators.ol.min.js"></script>
                     <!-- Necesario para compartir los plugins en el mapa -->

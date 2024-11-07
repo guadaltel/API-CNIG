@@ -7,7 +7,7 @@
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>
    <parent>
-      <groupId>es.ign.api</groupId>
+      <groupId>es.idee.api</groupId>
       <artifactId>api-idee-parent</artifactId>
       <version>1.0.0</version>
       <relativePath>../api-idee-parent/pom.xml</relativePath>
@@ -61,7 +61,7 @@
                <archive>
                   <manifest>
                      <!-- Jar file entry point -->
-                     <mainClass>es.ign.api.proxy.ProxyRedirect</mainClass>
+                     <mainClass>es.idee.api.proxy.ProxyRedirect</mainClass>
                   </manifest>
                </archive>
             </configuration>
