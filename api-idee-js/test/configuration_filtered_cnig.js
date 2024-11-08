@@ -143,9 +143,7 @@ function fun(M_) {
    * @private
    * @type {object}
    */
-  M_.config('tms', {
-    base: 'QUICK*Base_IGNBaseTodo_TMS',
-  });
+  M_.config('baseLayer', 'QUICK*Base_IGNBaseTodo_TMS');
 
   /**
    * BackgroundLayers Control

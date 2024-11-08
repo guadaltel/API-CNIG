@@ -163,9 +163,7 @@ params.forEach((param) => {
    * @private
    * @type {object}
    */
-  M.config('baseLayer', {
-    base: '${baseLayer}',
-  });
+  M.config('baseLayer', '${baseLayer}');
 
   /**
    * Controls configuration
