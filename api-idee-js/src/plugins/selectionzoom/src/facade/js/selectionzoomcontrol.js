@@ -34,7 +34,7 @@ let zoombase = null;
 
 /**
  * @classdesc
- * Background layers selector Mapea control.
+ * Background layers selector IDEE control.
  * This control puts a set of layers in the background of the map.
  */
 export default class SelectionZoomControl extends M.Control {
@@ -67,7 +67,7 @@ export default class SelectionZoomControl extends M.Control {
     // });
     this.layers = [];
 
-    // Array<Object> => Object: { id, title, preview, Array<MapeaLayer>}
+    // Array<Object> => Object: { id, title, preview, Array<IDEELayer>}
     // this.layers = layerOpts.slice(0, MAXIMUM_LAYERS);
     // const bboxArray = bbox];
     const idsArray = ids.split(',');

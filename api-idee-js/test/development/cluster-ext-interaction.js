@@ -1,4 +1,4 @@
-import { map as Mmap } from 'M/mapea';
+import { map as Mmap } from 'M/idee';
 import { SELECT_FEATURES, LOAD } from 'M/event/eventtype';
 import { MARKER } from 'M/style/Form';
 import { get as getProjection, transform } from 'ol/proj';

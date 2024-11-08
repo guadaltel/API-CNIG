@@ -1,4 +1,4 @@
-import { map } from 'M/mapea';
+import { map } from 'M/idee';
 import GeoJSON from 'M/layer/GeoJSON';
 
 const mapajs = map({

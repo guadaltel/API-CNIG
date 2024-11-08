@@ -1,4 +1,4 @@
-import { map } from 'M/mapea';
+import { map } from 'M/idee';
 import WMTS from 'M/layer/WMTS';
 
 const mapajs = map({

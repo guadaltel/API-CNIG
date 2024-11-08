@@ -1,5 +1,5 @@
 /* eslint-disable no-console,no-loop-func,no-param-reassign,no-proto,no-plusplus,object-property-newline,object-curly-newline,spaced-comment,camelcase,no-unused-vars,max-len */
-import { map as Mmap } from 'M/mapea';
+import { map as Mmap } from 'M/idee';
 import Generic from 'M/style/Generic';
 import GeoJSON from 'M/layer/GeoJSON';
 // import Vector from 'M/layer/Vector';

@@ -1,4 +1,4 @@
-import { map as Mmap } from 'M/mapea';
+import { map as Mmap } from 'M/idee';
 import GeoJSON from 'M/layer/GeoJSON';
 import StylePoint from 'M/style/Point';
 import StylePolygon from 'M/style/Polygon';

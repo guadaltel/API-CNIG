@@ -1,4 +1,4 @@
-import { map } from 'M/mapea';
+import { map } from 'M/idee';
 import WMS from 'M/layer/WMS';
 import WFS from 'M/layer/WFS';
 import KML from 'M/layer/KML';

@@ -1,4 +1,4 @@
-import { map as Mmap } from 'M/mapea';
+import { map as Mmap } from 'M/idee';
 import WMS from 'M/layer/WMS';
 import WFS from 'M/layer/WFS';
 import Generic from 'M/layer/Generic';

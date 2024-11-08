@@ -1,4 +1,4 @@
-import { map as Mmap } from 'M/mapea';
+import { map as Mmap } from 'M/idee';
 // import Location from 'M/control/Location';
 import Mouse from 'M/control/Mouse';
 // import OverviewMap from 'M/control/OverviewMap';

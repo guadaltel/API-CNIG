@@ -1,4 +1,4 @@
-import { map as Mmap } from 'M/mapea';
+import { map as Mmap } from 'M/idee';
 import WMTS from 'M/layer/WMTS';
 
 const mapa1 = Mmap({

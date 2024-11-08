@@ -1,4 +1,4 @@
-import { map as Mmap } from 'M/mapea';
+import { map as Mmap } from 'M/idee';
 import { info } from 'M/dialog';
 import WMC from 'M/layer/WMC';
 import WMS from 'M/layer/WMS';

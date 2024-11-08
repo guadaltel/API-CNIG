@@ -176,7 +176,7 @@ class Attributions extends ControlBase {
       } else if (type === 'kml') {
         layer = new KML(optionsLayer, { displayInLayerSwitcher: false });
       } else if (this.type === 'topojson') {
-        // TODO: Implement in Mapea M.layer.TopoJSON
+        // TODO: Implement in IDEE M.layer.TopoJSON
       }
     }
 

@@ -1,4 +1,4 @@
-import { map } from 'M/mapea';
+import { map } from 'M/idee';
 
 window.mapjs = map({
   container: 'map',

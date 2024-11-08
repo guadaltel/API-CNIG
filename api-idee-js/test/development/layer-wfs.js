@@ -1,4 +1,4 @@
-import { map } from 'M/mapea';
+import { map } from 'M/idee';
 import WFS from 'M/layer/WFS';
 
 const mapjs = map({
