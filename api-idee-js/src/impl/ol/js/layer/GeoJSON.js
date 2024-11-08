@@ -255,7 +255,7 @@ class GeoJSON extends Vector {
       this.unselectFeatures();
 
       if (!isNullOrEmpty(feature)) {
-        const clickFn = feature.getAttribute('vendor.mapea.click');
+        const clickFn = feature.getAttribute('vendor.idee.click');
         if (isFunction(clickFn)) {
           clickFn(evt, feature);
         } else {

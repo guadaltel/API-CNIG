@@ -96,7 +96,7 @@ export default class CreationControl extends M.Control {
     this.isTextActive = false;
 
     /**
-     * Selected Mapea feature
+     * Selected IDEE feature
      * @private
      * @type {M.feature}
      */
@@ -118,7 +118,7 @@ export default class CreationControl extends M.Control {
     this.geometry = undefined; // Point, LineString, Polygon
 
     /**
-     * Mapea layer where a square will be drawn around selected feature.
+     * IDEE layer where a square will be drawn around selected feature.
      * @private
      * @type {*}
      */
@@ -659,7 +659,7 @@ export default class CreationControl extends M.Control {
 
       // if point vs text vs else
       if ((this.geometry === 'Point' || this.geometry === 'MultiPoint') && !isTextDrawActive) {
-        this.emphasis = this.getImpl().getMapeaFeatureClone();
+        this.emphasis = this.getImpl().getIdeeFeatureClone();
 
         this.emphasis.setStyle(new M.style.Point({
           radius: 20,

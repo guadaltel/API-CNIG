@@ -47,7 +47,7 @@ export default class SelectionControl extends M.Control {
     this.selectedFeatures_ = [];
 
     /**
-     * Mapea layer where a square will be drawn around selected feature.
+     * IDEE layer where a square will be drawn around selected feature.
      * @private
      * @type {*}
      */
@@ -258,7 +258,7 @@ export default class SelectionControl extends M.Control {
     if (this.feature) {
       // if point vs text vs else
       if ((this.geometry === 'Point' || this.geometry === 'MultiPoint')) {
-        this.emphasis = this.getImpl().getMapeaFeatureClone();
+        this.emphasis = this.getImpl().getIdeeFeatureClone();
 
         this.emphasis.setStyle(new M.style.Point({
           radius: 20,

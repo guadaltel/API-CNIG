@@ -78,7 +78,7 @@ export default class ViewShedControl extends M.impl.Control {
   }
 
   /**
-   * Converts Openlayers features to Mapea features.
+   * Converts Openlayers features to IDEE features.
    * @public
    * @function
    * @api

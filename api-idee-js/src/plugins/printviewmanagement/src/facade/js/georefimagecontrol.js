@@ -432,7 +432,7 @@ export default class GeorefimageControl extends M.Control {
       );
 
       printUrl = M.utils.addParameters(printUrl, 'mapeaop=geoprint');
-      // FIXME: delete proxy deactivation and uncomment if/else when proxy is fixed on Mapea
+      // FIXME: delete proxy deactivation and uncomment if/else when proxy is fixed on IDEE
       M.proxy(this.useProxy);
       M.remote.post(printUrl, printData).then((responseParam) => {
         let response = responseParam;

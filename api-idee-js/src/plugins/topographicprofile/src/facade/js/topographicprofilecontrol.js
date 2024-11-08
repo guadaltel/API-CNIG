@@ -37,7 +37,7 @@ export default class TopographicprofileControl extends M.Control {
   createView(map) {
     // eslint-disable-next-line
     console.warn(getValue('exception.obsolete'));
-    if (!M.template.compileSync) { // JGL: retrocompatibilidad Mapea4
+    if (!M.template.compileSync) {
       M.template.compileSync = (string, options) => {
         let templateCompiled;
         let templateVars = {};

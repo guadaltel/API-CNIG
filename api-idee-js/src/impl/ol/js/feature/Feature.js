@@ -47,7 +47,7 @@ class Feature {
     if (!isNullOrEmpty(id)) {
       this.olFeature_.setId(id);
     } else if (isNullOrEmpty(this.olFeature_.getId())) {
-      this.olFeature_.setId(generateRandom('mapea_feature_'));
+      this.olFeature_.setId(generateRandom('idee_feature_'));
     }
   }
 
@@ -74,7 +74,7 @@ class Feature {
     if (!isNullOrEmpty(olFeature)) {
       this.olFeature_ = olFeature;
       if (canBeModified !== false && isNullOrEmpty(this.olFeature_.getId())) {
-        this.olFeature_.setId(generateRandom('mapea_feature_'));
+        this.olFeature_.setId(generateRandom('idee_feature_'));
       }
     }
   }

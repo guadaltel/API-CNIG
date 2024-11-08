@@ -38,7 +38,7 @@
   "georeferenced_img": "Imagen georreferenciada",
   "format": "Formato",
   "errorProjectionCapabilities": "La proyeccion seleccionada no está disponible para esta capa base. Por favor elija otra proyección.",
-  "printInfo": "Impresión generada a través de Mapea",
+  "printInfo": "Impresión generada a través de IDEE",
   "generating": "Generando imagen georreferenciada",
   "referenced": "Imagen georreferenciada",
   "projection": "Proyección",

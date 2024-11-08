@@ -121,8 +121,8 @@ export default class BeautyTOCControl extends M.Control {
 
     const layerFound = filtered.length > 0 ? filtered[0] : null;
     if (layerFound !== null && layerFound.url === 'https://www.ign.es/wms/pnoa-historico?' && !layerFound.isVisible()) {
-      const width = document.querySelector('.m-mapea-container').offsetWidth;
-      const height = document.querySelector('.m-mapea-container').offsetHeight;
+      const width = document.querySelector('.m-idee-container').offsetWidth;
+      const height = document.querySelector('.m-idee-container').offsetHeight;
       const urlCheck = layerFound.url.concat('SERVICE=WMS&VERSION=')
         .concat(layerFound.version)
         .concat('&REQUEST=GetMap&FORMAT=image/png&TRANSPARENT=true&LAYERS=')

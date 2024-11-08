@@ -644,7 +644,7 @@ export default class LyrCompareControl extends M.Control {
   }
 
   /**
-   * Transform StringLayers to Mapea M.Layer
+   * Transform StringLayers to IDEE M.Layer
    * @public
    * @function
    * @api stable

@@ -16,7 +16,7 @@ import { changeStyleDialog } from './util';
 
 /**
  * @classdesc
- * Vector layers management Mapea control.
+ * Vector layers management IDEE control.
  * This control can create vector layers, draw and edit features, edit styles,
  * calculate topographic profiles and buffers, and download a layer or feature.
  */

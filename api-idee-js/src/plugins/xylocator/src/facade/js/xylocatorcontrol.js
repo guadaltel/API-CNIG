@@ -9,7 +9,7 @@ import { getValue } from './i18n/language';
 
 /**
  * @classdesc
- * XYLocator Mapea control.
+ * XYLocator IDEE control.
  * This control centers map on given coordinates.
  */
 export default class XYLocatorControl extends M.Control {

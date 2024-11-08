@@ -22,7 +22,7 @@
 import {
   addParameters, generateRandom, isNullOrEmpty, isObject,
 } from './Utils';
-import { useproxy } from '../mapea';
+import { useproxy } from '../idee';
 import Response from './Response';
 
 /**
@@ -110,7 +110,7 @@ const jsonp = (urlVar, data, options) => {
   }
 
   // creates a random name to avoid clonflicts
-  const jsonpHandlerName = generateRandom('mapea_jsonphandler_');
+  const jsonpHandlerName = generateRandom('idee_jsonphandler_');
   url = addParameters(url, {
     callback: jsonpHandlerName,
   });

@@ -441,11 +441,11 @@ class LoadFiles {
   }
 
   /**
-   * Convierte features de Openlayers en features de Mapea
+   * Convierte features de Openlayers en features de IDEE
    * @public
    * @function
    * @param {Array<OL.Feature>} implFeatures
-   * @returns {Array<M.Feature>} features de mapea
+   * @returns {Array<M.Feature>} features de idee
    */
   static featuresToFacade(implFeatures) {
     return implFeatures.map((feature) => {

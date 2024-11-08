@@ -83,7 +83,7 @@ export default class GeometryDrawControl extends M.Control {
     this.isEditionActive = false;
 
     /**
-     * Selected Mapea feature
+     * Selected IDEE feature
      * @private
      * @type {M.feature}
      */
@@ -203,9 +203,9 @@ export default class GeometryDrawControl extends M.Control {
     this.y = undefined;
 
     /**
-     * Saves drawing layer ( __ draw__) from Mapea.
+     * Saves drawing layer ( __ draw__) from IDEE.
      * @private
-     * @type {*} - Mapea layer
+     * @type {*} - IDEE layer
      */
     this.drawLayer = undefined;
 
@@ -217,7 +217,7 @@ export default class GeometryDrawControl extends M.Control {
     this.file_ = null;
 
     /**
-     * Mapea layer where a square will be drawn around selected feature.
+     * IDEE layer where a square will be drawn around selected feature.
      * @private
      * @type {*}
      */
@@ -990,7 +990,7 @@ export default class GeometryDrawControl extends M.Control {
   }
 
   /**
-   * Deletes Mapea feature set attributes.
+   * Deletes IDEE feature set attributes.
    * @public
    * @function
    * @api
@@ -1080,7 +1080,7 @@ export default class GeometryDrawControl extends M.Control {
 
       // if point vs text vs else
       if ((this.geometry === 'Point' || this.geometry === 'MultiPoint') && !isTextDrawActive) {
-        this.emphasis = this.getImpl().getMapeaFeatureClone();
+        this.emphasis = this.getImpl().getIDEEFeatureClone();
 
         this.emphasis.setStyle(new M.style.Point({
           radius: 20,
@@ -1469,7 +1469,7 @@ export default class GeometryDrawControl extends M.Control {
   }
 
   /**
-   * Loads vector layer features on __draw__ (Mapea) layer.
+   * Loads vector layer features on __draw__ (IDEE) layer.
    * @public
    * @function
    * @api

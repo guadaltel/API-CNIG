@@ -9,7 +9,7 @@
     "georefimage2_obsolete": "Mensaje para el desarrollador: M.plugin.georefimage2 ha quedado obsoleto, utilice en su lugar M.plugin.PrintViewManagement"
   },
   "errorProjectionCapabilities": "La proyeccion seleccionada no está disponible para esta capa base. Por favor elija otra proyección.",
-  "printInfo": "Impresión generada a través de Mapea",
+  "printInfo": "Impresión generada a través de IDEE",
   "tooltip": "Descargar Imagen georreferenciada",
   "generating": "Generando imagen georreferenciada",
   "referenced": "Imagen georreferenciada",

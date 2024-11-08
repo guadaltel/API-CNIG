@@ -345,7 +345,7 @@ class Vector extends Layer {
     if (this.extract === true) {
       const feature = features[0];
       if (!isNullOrEmpty(feature)) {
-        const clickFn = feature.getAttribute('vendor.mapea.click');
+        const clickFn = feature.getAttribute('vendor.idee.click');
         if (isFunction(clickFn)) {
           clickFn(evt, feature);
         } else {

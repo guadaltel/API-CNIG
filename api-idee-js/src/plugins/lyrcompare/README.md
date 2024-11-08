@@ -88,7 +88,7 @@ A esta/s capa/s se le aplicará el efecto de transparencia.
 # Ejemplos de uso
 
 ## Ejemplo 1
-Insertar capas WMS con formato Mapea.
+Insertar capas WMS con formato IDEE.
 El modo de comparación es 0, por lo que no se iniciará al cargarlo.
 El modo de división es 1 por lo que será estático.
 La interfaz está activa.
@@ -138,7 +138,7 @@ map.addPlugin(pluginLyrCompare);
 ```
 
 ## Ejemplo 3
-WMS con formato Mapea y sin interfaz.
+WMS con formato IDEE y sin interfaz.
 
 ```javascript
 const pluginLyrCompare = new M.plugin.LyrCompare({
@@ -165,7 +165,7 @@ map.addPlugin(pluginLyrCompare);
 
 
 ## Ejemplo 4
-WMTS con formato Mapea y sin interfaz.
+WMTS con formato IDEE y sin interfaz.
 
 ```javascript
 const pluginLyrCompare = new M.plugin.LyrCompare({

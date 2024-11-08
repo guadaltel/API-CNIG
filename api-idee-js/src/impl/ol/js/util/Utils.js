@@ -574,7 +574,7 @@ class Utils {
       if (!isNullOrEmpty(id)) {
         olFeature.setId(id);
       } else {
-        olFeature.setId(generateRandom('mapea_feature_'));
+        olFeature.setId(generateRandom('idee_feature_'));
       }
       olFeature.setProperties(properties, true);
       olFeature.setGeometry(geometry);

@@ -3,7 +3,7 @@
  */
 import MapImpl from 'impl/Map';
 import Base from './Base';
-import { getQuickLayers } from './mapea';
+import { getQuickLayers } from './idee';
 import {
   isUndefined, isNull, isArray, isNullOrEmpty, isFunction, isObject, isString, normalize,
   addParameters, concatUrlPaths, escapeJSCode, getEnvolvedExtent,
@@ -205,7 +205,7 @@ class Map extends Base {
     this._attributionsMap = [];
 
     // adds class to the container
-    params.container.classList.add('m-mapea-container');
+    params.container.classList.add('m-idee-container');
 
     impl.on(EventType.COMPLETED, () => {
       this._finishedMapImpl = true;
@@ -2831,7 +2831,7 @@ class Map extends Base {
     if (center.draw === true) {
       this.drawLayer_.clear();
 
-      this.centerFeature_ = new Feature('__mapeacenter__', {
+      this.centerFeature_ = new Feature('__ideecenter__', {
         type: 'Feature',
         geometry: {
           type: 'Point',
@@ -2839,7 +2839,7 @@ class Map extends Base {
         },
         properties: {
           vendor: {
-            mapea: { // TODO mig
+            idee: { // TODO mig
               click: (evt) => {
                 const label = this.getLabel();
                 if (!isNullOrEmpty(label)) {
@@ -3348,7 +3348,7 @@ class Map extends Base {
       };
       if (isFunction(point.click)) {
         gj.properties.vendor = {
-          mapea: {
+          idee: {
             click: point.click,
           },
         };

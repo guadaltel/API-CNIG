@@ -1353,7 +1353,7 @@ export const draggabillyPlugin = (panel, handleEl) => {
   let draggable = null;
   setTimeout(() => {
     draggable = new Draggabilly(htmlPanel, {
-      containment: '.m-mapea-container',
+      containment: '.m-idee-container',
       handle: handleEl,
     });
 

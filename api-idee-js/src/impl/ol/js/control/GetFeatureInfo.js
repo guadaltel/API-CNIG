@@ -300,7 +300,7 @@ class GetFeatureInfo extends Control {
         features.forEach((feature) => {
           const attr = feature.getKeys();
           formatedInfo += '<div class=\'divinfo\'>';
-          formatedInfo += `<table class='mapea-table'><tbody><tr><td class='header' colspan='3'>' ${beautifyAttribute(layerName)} '</td></tr>'`;
+          formatedInfo += `<table class='idee-table'><tbody><tr><td class='header' colspan='3'>' ${beautifyAttribute(layerName)} '</td></tr>'`;
           for (let i = 0, ilen = attr.length; i < ilen; i += 1) {
             const attrName = attr[i];
             const attrValue = feature.get(attrName);
@@ -371,7 +371,7 @@ class GetFeatureInfo extends Control {
     let html = '<div class=\'divinfo\'>';
 
     // build the table
-    html += `<table class='mapea-table'><tbody><tr><td class='header' colspan='3'>${beautifyAttribute(layerName)}</td></tr>`;
+    html += `<table class='idee-table'><tbody><tr><td class='header' colspan='3'>${beautifyAttribute(layerName)}</td></tr>`;
 
     for (let i = 0, ilen = attrValuesString.length; i < ilen; i += 1) {
       const attrValueString = attrValuesString[i].trim();
@@ -436,7 +436,7 @@ class GetFeatureInfo extends Control {
     const attrValuesString = infoVar.split('\n');
 
     let html = '';
-    const htmlHeader = `<table class='mapea-table'><tbody><tr><td class='header' colspan='3'>${beautifyAttribute(layerName)}</td></tr>`;
+    const htmlHeader = `<table class='idee-table'><tbody><tr><td class='header' colspan='3'>${beautifyAttribute(layerName)}</td></tr>`;
 
     for (let i = 0, ilen = attrValuesString.length; i < ilen; i += 1) {
       const attrValueString = attrValuesString[i].trim();

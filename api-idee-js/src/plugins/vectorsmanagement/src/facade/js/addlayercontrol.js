@@ -6,7 +6,7 @@ import { getValue } from './i18n/language';
 
 /**
  * @classdesc
- * Add layer Mapea control.
+ * Add layer IDEE control.
  * This control can create vector layers.
  */
 export default class AddLayerControl extends M.Control {

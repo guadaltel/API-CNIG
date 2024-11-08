@@ -9,7 +9,7 @@ import WMS from 'M/layer/WMS';
 import WMTS from 'M/layer/WMTS';
 import TMS from 'M/layer/TMS';
 import MapLibre from 'M/layer/MapLibre';
-import { getQuickLayers } from '../mapea';
+import { getQuickLayers } from '../idee';
 import ControlBase from './Control';
 import { compileSync as compileTemplate } from '../util/Template';
 import { ADDED_TO_MAP, LOAD } from '../event/eventtype';

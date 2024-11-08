@@ -52,7 +52,7 @@ export default class InfocoordinatesControl extends M.Control {
    */
   createView(map) {
     this.map_ = map;
-    if (!M.template.compileSync) { // JGL: retrocompatibilidad Mapea4
+    if (!M.template.compileSync) {
       M.template.compileSync = (string, options) => {
         let templateCompiled;
         let templateVars = {};

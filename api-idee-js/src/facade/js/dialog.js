@@ -72,12 +72,12 @@ export const show = (message, title, severity, order = 300, configuration = {}) 
   // remove();
 
   // append new dialog
-  const mapeaContainer = document.querySelector('div.m-mapea-container');
+  const ideeContainer = document.querySelector('div.m-idee-container');
 
   // adds listener to close the dialog
   const okButton = html.querySelector('div.m-button > button');
   okButton.addEventListener('click', (evt) => removeElement(html));
-  mapeaContainer.appendChild(html);
+  ideeContainer.appendChild(html);
 };
 
 /**

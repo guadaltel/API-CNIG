@@ -272,7 +272,7 @@ export default class ComparepanelControl extends M.Control {
   }
 
   /**
-   * Transform StringLayers to Mapea M.Layer
+   * Transform StringLayers to IDEE M.Layer
    * Entra tantas veces como mapas lienzo activos haya.
    * @public
    * @function

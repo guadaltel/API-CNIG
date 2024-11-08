@@ -107,7 +107,7 @@ export default class Attributions extends M.Plugin {
     this.layerName_ = options.layerName || 'attributions';
 
     /**
-     * Layer of Mapea with attributions
+     * Layer of IDEE with attributions
      *
      * @private
      * @type {M.layer.GeoJSON | M.layer.KML}
@@ -284,7 +284,7 @@ export default class Attributions extends M.Plugin {
         } else if (this.type_ === 'kml') {
           this.layer_ = new M.layer.KML(optionsLayer, { displayInLayerSwitcher: false });
         } else if (this.type === 'topojson') {
-          // TODO: Implement in Mapea M.layer.TopoJSON
+          // TODO: Implement in IDEE M.layer.TopoJSON
         }
       }
 

@@ -92,7 +92,7 @@ export default class EditionControl extends M.Control {
     this.isEditAttributeActive = false;
 
     /**
-     * Mapea layer where a square will be drawn around selected feature.
+     * IDEE layer where a square will be drawn around selected feature.
      * @private
      * @type {*}
      */
@@ -639,7 +639,7 @@ export default class EditionControl extends M.Control {
       let emphasis;
       // if point vs text vs else
       if (geomType === 'Point' || geomType === 'MultiPoint') {
-        emphasis = this.getImpl().getMapeaFeatureClone(feature);
+        emphasis = this.getImpl().getIdeeFeatureClone(feature);
 
         emphasis.setStyle(new M.style.Point({
           radius: 20,

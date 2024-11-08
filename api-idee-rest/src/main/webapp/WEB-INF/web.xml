@@ -15,7 +15,7 @@
       <url-pattern>/*</url-pattern>
     </filter-mapping>
     <servlet>
-        <servlet-name>mapea-rest-api</servlet-name>
+        <servlet-name>idee-rest-api</servlet-name>
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
@@ -28,15 +28,15 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>mapea-rest-api</servlet-name>
+        <servlet-name>idee-rest-api</servlet-name>
         <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
     <servlet>
-      <servlet-name>proxyMapea</servlet-name>
+      <servlet-name>proxyIDEE</servlet-name>
       <servlet-class>es.idee.proxy.ProxyRedirect</servlet-class>
     </servlet>
     <servlet-mapping>
-      <servlet-name>proxyMapea</servlet-name>
+      <servlet-name>proxyIDEE</servlet-name>
       <url-pattern>/proxyPost</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -230,7 +230,7 @@ export default class LyrdropdownControl extends M.Control {
   }
 
   /**
-   * Transform StringLayers to Mapea M.Layer
+   * Transform StringLayers to IDEE M.Layer
    *
    * WMTS*http://www.ign.es/wmts/pnoa-ma?*OI.OrthoimageCoverage*EPSG:25830*PNOA
    * WMS*IGN*http://www.ign.es/wms-inspire/ign-base*IGNBaseTodo
@@ -243,7 +243,7 @@ export default class LyrdropdownControl extends M.Control {
    */
 
   /**
-   * Transform StringLayers to Mapea M.Layer
+   * Transform StringLayers to IDEE M.Layer
    * Entra tantas veces como mapas lienzo activos haya.
    * @public
    * @function

@@ -199,7 +199,7 @@ export default class GeometryDrawControl extends M.impl.Control {
    * Sets vector source for layer
    * @public
    * @function
-   * @param {M.Layer} layer - Mapea layer
+   * @param {M.Layer} layer - IDEE layer
    * @param {*} source - OL source
    * @api
    */
@@ -213,7 +213,7 @@ export default class GeometryDrawControl extends M.impl.Control {
    * @function
    * @api
    */
-  getMapeaFeatureClone() {
+  getIdeeFeatureClone() {
     // eslint-disable-next-line no-underscore-dangle
     const implFeatureClone = this.facadeControl.feature.getImpl().olFeature_.clone();
     const emphasis = M.impl.Feature.olFeature2Facade(implFeatureClone);
@@ -324,7 +324,7 @@ export default class GeometryDrawControl extends M.impl.Control {
   }
 
   /**
-   * Converts Openlayers features to Mapea features.
+   * Converts Openlayers features to IDEE features.
    * @public
    * @function
    * @api

@@ -69,10 +69,10 @@ class GeoJSON extends OLFormatGeoJSON {
     }
     // vendor parameters
     if (geoJSONFeature.properties && geoJSONFeature.properties.vendor
-        && geoJSONFeature.properties.vendor.mapea) {
+        && geoJSONFeature.properties.vendor.idee) {
       // icons
-      if (geoJSONFeature.properties.vendor.mapea.icon) {
-        GeoJSON.applyIcon(feature, geoJSONFeature.properties.vendor.mapea.icon);
+      if (geoJSONFeature.properties.vendor.idee.icon) {
+        GeoJSON.applyIcon(feature, geoJSONFeature.properties.vendor.idee.icon);
       }
     }
     return feature;

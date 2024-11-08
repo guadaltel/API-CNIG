@@ -32,7 +32,7 @@ export default class QueryAttributesControl extends M.Control {
     super(impl, 'QueryAttributes');
 
     /**
-     * Mapea filter with the user's query.
+     * IDEE filter with the user's query.
      * @public
      */
     this.mapeaFilterQuery = null;
@@ -1254,7 +1254,7 @@ export default class QueryAttributesControl extends M.Control {
    * Checks if layer is loaded.
    * @public
    * @function
-   * @param {Mapea Layer} layer - clicked layer on select menu
+   * @param {IDEE Layer} layer - clicked layer on select menu
    * @api
    */
   isLayerLoaded(layer) {

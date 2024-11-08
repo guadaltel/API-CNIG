@@ -118,7 +118,7 @@ export default class ContactLinkControl extends M.Control {
    * @api stable
    */
   createView(map) {
-    if (!M.template.compileSync) { // JGL: retrocompatibilidad Mapea4
+    if (!M.template.compileSync) {
       M.template.compileSync = (string, options) => {
         let templateCompiled;
         let templateVars = {};

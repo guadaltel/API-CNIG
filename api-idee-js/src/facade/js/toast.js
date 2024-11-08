@@ -61,12 +61,12 @@ export const show = (message, severity, icon, order = 300, time = 4000) => {
   });
 
   // append new toast
-  const mapeaContainer = document.querySelector('div.m-mapea-container');
+  const ideeContainer = document.querySelector('div.m-idee-container');
   let toastContainer = document.querySelector('div.m-toasts-container');
   if (!toastContainer) {
     toastContainer = document.createElement('div');
     toastContainer.classList.add('m-toasts-container');
-    mapeaContainer.appendChild(toastContainer);
+    ideeContainer.appendChild(toastContainer);
   }
 
   // close in 4 seconds

@@ -20,7 +20,7 @@ class Clustered extends Feature {
    * @api
    */
   constructor(features, attributes) {
-    super(generateRandom('_mapea_cluster_'));
+    super(generateRandom('_idee_cluster_'));
     this.setAttributes(attributes);
     this.setAttribute('features', features);
   }

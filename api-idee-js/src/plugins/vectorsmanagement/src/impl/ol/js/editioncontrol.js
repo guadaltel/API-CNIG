@@ -317,7 +317,7 @@ export default class Editioncontrol extends M.impl.Control {
    * @function
    * @api
    */
-  getMapeaFeatureClone(feature) {
+  getIdeeFeatureClone(feature) {
     // eslint-disable-next-line no-underscore-dangle
     const implFeatureClone = feature.getImpl().olFeature_.clone();
     const emphasis = M.impl.Feature.olFeature2Facade(implFeatureClone);

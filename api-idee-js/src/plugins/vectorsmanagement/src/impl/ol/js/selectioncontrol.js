@@ -98,7 +98,7 @@ export default class Selectioncontrol extends M.impl.Control {
    * @function
    * @api
    */
-  getMapeaFeatureClone() {
+  getIdeeFeatureClone() {
     // eslint-disable-next-line no-underscore-dangle
     const implFeatureClone = this.facadeControl.feature.getImpl().olFeature_.clone();
     const emphasis = M.impl.Feature.olFeature2Facade(implFeatureClone);

@@ -676,7 +676,7 @@ export default class PrinterMapControl extends M.Control {
         printData.attributes.profil = profilControl[0].getImage();
       }
 
-      // FIXME: delete proxy deactivation and uncomment if/else when proxy is fixed on Mapea
+      // FIXME: delete proxy deactivation and uncomment if/else when proxy is fixed on IDEE
       M.proxy(false);
       M.remote.post(url, printData).then((responseParam) => {
         let response = responseParam;

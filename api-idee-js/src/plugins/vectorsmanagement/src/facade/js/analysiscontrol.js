@@ -355,7 +355,7 @@ export default class AnalysisControl extends M.Control {
    * @api
    */
   createFeatureBuffer(feature, distance, layerID) {
-    const olFeature = this.getImpl().getMapeaFeatureClone(feature).getImpl().getOLFeature();
+    const olFeature = this.getImpl().getIdeeFeatureClone(feature).getImpl().getOLFeature();
     this.getImpl().setStyle('rgba(113, 167, 211)', olFeature);
     const format = new ol.format.GeoJSON();
     olFeature.getGeometry().transform(this.map_.getProjection().code, 'EPSG:4326');

@@ -43,7 +43,7 @@ class Rotate extends Control {
     this.panel = element;
     // REV_OL
     // El funcionamiento por defecto en OL es mostrar el control oculto
-    // En Mapea por defecto vamos a mostrar si alguien lo pone se interpreta
+    // En IDEE por defecto vamos a mostrar si alguien lo pone se interpreta
     // que es para usarlo en un contexto de uso para su visualización sobre el mapa
     // if (this.panel) {
     // this.panel.style.display = 'none';

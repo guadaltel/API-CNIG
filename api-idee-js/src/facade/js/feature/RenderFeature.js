@@ -32,7 +32,7 @@ class RenderFeature extends Base {
      * @type {string}
      * @api
      */
-    this.id_ = generateRandom('mapea', 'render_feature');
+    this.id_ = generateRandom('idee', 'render_feature');
   }
 
   /**

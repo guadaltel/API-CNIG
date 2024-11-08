@@ -16,7 +16,7 @@ import { getValue } from './i18n/language';
 
 /**
  * @classdesc
- * Background layers selector Mapea control.
+ * Background layers selector IDEE control.
  * This control puts a set of layers in the background of the map.
  */
 export default class BackImgLayerControl extends M.Control {
@@ -69,7 +69,7 @@ export default class BackImgLayerControl extends M.Control {
         layerOptsModified[elementIndex] = temp;
         return temp;
       });
-      // Array<Object> => Object: { id, title, preview, Array<MapeaLayer>}
+      // Array<Object> => Object: { id, title, preview, Array<IDEELayer>}
       this.layers = layerOptsModified.slice(0);
     } else {
       const idsArray = ids.split(',');
@@ -84,25 +84,25 @@ export default class BackImgLayerControl extends M.Control {
           if (/QUICK.*/.test(urlLayer)) {
             aux = M.getQuickLayers(urlLayer.replace('QUICK*', ''));
           }
-          let mapeaLayer;
+          let ideeLayer;
           if (!M.utils.isNullOrEmpty(aux)) {
-            mapeaLayer = aux;
-            if (typeof mapeaLayer === 'string') {
-              mapeaLayer = new M.layer.WMTS(mapeaLayer);
+            ideeLayer = aux;
+            if (typeof ideeLayer === 'string') {
+              ideeLayer = new M.layer.WMTS(ideeLayer);
             }
           } else {
-            mapeaLayer = new M.layer.WMTS(urlLayer);
+            ideeLayer = new M.layer.WMTS(urlLayer);
           }
-          return mapeaLayer;
+          return ideeLayer;
         });
 
-        const mapeaLyrsObject = {
+        const ideeLyrsObject = {
           id: idsArray[idx],
           title: titlesArray[idx],
           preview: previewArray[idx],
           layers: backgroundLayers,
         };
-        this.layers.push(mapeaLyrsObject);
+        this.layers.push(ideeLyrsObject);
       });
     }
 

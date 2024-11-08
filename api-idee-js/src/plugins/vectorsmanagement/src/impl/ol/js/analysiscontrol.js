@@ -103,7 +103,7 @@ export default class Analysiscontrol extends M.impl.Control {
    * @api
    * @param {M.Feature} mFeature
    */
-  getMapeaFeatureClone(mFeature) {
+  getIdeeFeatureClone(mFeature) {
     // eslint-disable-next-line no-underscore-dangle
     const implFeatureClone = mFeature.getImpl().olFeature_.clone();
     const emphasis = M.impl.Feature.olFeature2Facade(implFeatureClone);

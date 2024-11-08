@@ -23,7 +23,7 @@
      CONTAINER
 ************************/
 
-.m-mapea-container {
+.m-idee-container {
     width: 100%;
     height: 100%;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABlBMVEUAAAD///+l2Z/dAAAAAnRSTlMICLCRzwIAAAAVSURBVBjTY2CEAwYEGNKCw8QbCEEApbQAyTWv+7EAAAAASUVORK5CYII=);
@@ -139,8 +139,8 @@ div.m-control button[class*=" g-cartografia-"]:focus,
 
 /* TEXT */
 
-.m-mapea-container input[type="text"],
-.m-mapea-container textarea {
+.m-idee-container input[type="text"],
+.m-idee-container textarea {
     margin: 5px;
     padding: 5px;
     background-color: transparent;
@@ -155,7 +155,7 @@ div.m-control button[class*=" g-cartografia-"]:focus,
     font-size: 13px;
 }
 
-.m-mapea-container input[type="text"]:focus {
+.m-idee-container input[type="text"]:focus {
     outline: none;
     outline: none;
 }

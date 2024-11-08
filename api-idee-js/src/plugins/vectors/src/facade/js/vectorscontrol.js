@@ -60,7 +60,7 @@ export default class VectorsControl extends M.Control {
     impl.facadeControl = this;
 
     /**
-     * Selected Mapea feature
+     * Selected IDEE feature
      * @private
      * @type {M.feature}
      */
@@ -124,9 +124,9 @@ export default class VectorsControl extends M.Control {
     this.srs = 'EPSG:4258';
 
     /**
-     * Saves drawing layer ( __ draw__) from Mapea.
+     * Saves drawing layer ( __ draw__) from IDEE.
      * @private
-     * @type {*} - Mapea layer
+     * @type {*} - IDEE layer
      */
     this.drawLayer = undefined;
 
@@ -138,7 +138,7 @@ export default class VectorsControl extends M.Control {
     this.file_ = null;
 
     /**
-     * Mapea layer where a square will be drawn around selected feature.
+     * IDEE layer where a square will be drawn around selected feature.
      * @private
      * @type {*}
      */
@@ -1633,7 +1633,7 @@ export default class VectorsControl extends M.Control {
 
     if (this.feature) {
       if ((this.geometry === 'Point' || this.geometry === 'MultiPoint')) {
-        this.emphasis = this.getImpl().getMapeaFeatureClone();
+        this.emphasis = this.getImpl().getIdeeFeatureClone();
         this.emphasis.setStyle(new M.style.Point({
           radius: 20,
           stroke: {

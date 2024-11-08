@@ -11,7 +11,7 @@ const plugin = new Printer({
     },
     pages: {
       clientLogo: 'http://www.juntadeandalucia.es/economiayhacienda/images/plantilla/logo_cabecera.gif',
-      creditos: 'Impresión generada a través de Mapea',
+      creditos: 'Impresión generada a través de IDEE',
     },
   },
 }, {
