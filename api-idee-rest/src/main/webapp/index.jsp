@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="idee" content="yes">
     <title>API CNIG</title>
-    <link type="text/css" rel="stylesheet" href="assets/css/apiidee.ol.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/api-idee.ol.min.css">
     </link>
     <style type="text/css">
         html,
@@ -40,7 +40,7 @@
 <body>
     <div id="map" class="m-container"></div>
     <script type="text/javascript" src="vendor/browser-polyfill.js"></script>
-    <script type="text/javascript" src="js/apiidee.ol.min.js"></script>
+    <script type="text/javascript" src="js/api-idee.ol.min.js"></script>
     <script type="text/javascript" src="js/configuration.js"></script>
     <%
       String[] jsfiles = PluginsManager.getJSFiles(adaptedParams);
