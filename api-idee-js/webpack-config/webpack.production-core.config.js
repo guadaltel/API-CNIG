@@ -51,13 +51,17 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules\/(?!ol)|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: path.resolve(__dirname, 'mutate-loader'),
           options: {
-            presets: ['@babel/preset-env'],
+            mode: 'prod',
           },
         },
+        include: /node_modules\/ol\/*/,
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules\/(?!ol)|bower_components)/,
       },
       {
         test: [/\.hbs$/, /\.html$/],
