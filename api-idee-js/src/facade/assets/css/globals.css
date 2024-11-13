@@ -1,0 +1,5 @@
+/*En este archivo iran las variables según el perfil de compilación*/
+:root {
+    --color-prueba: #ff0000;
+    --otro-color: #00ff00;
+}

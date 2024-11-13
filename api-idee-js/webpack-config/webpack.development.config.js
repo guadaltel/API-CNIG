@@ -44,8 +44,9 @@ if (profile === false) {
 }
 
 const config = path.resolve(__dirname, `../test/configuration_filtered_${profile}.js`);
+const cssVarPath = path.resolve(__dirname, `../src/facade/assets/css/profiles/${profile}.css`);
 const entrypoint = {};
-entrypoint[testName] = testPath;
+entrypoint[testName] = [testPath, cssVarPath];
 entrypoint.config = config;
 
 module.exports = {

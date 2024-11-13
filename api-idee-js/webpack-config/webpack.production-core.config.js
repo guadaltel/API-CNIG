@@ -9,14 +9,37 @@ const webpack = require('webpack');
 const PJSON_PATH = path.resolve(__dirname, '..', 'package.json');
 const pjson = require(PJSON_PATH);
 
+let profile = false;
+const environment = process.env.ENVIRONMENT || '';
+
+if (environment.includes('cnig')) {
+  profile = 'cnig';
+}
+
+if (environment.includes('sigc')) {
+  profile = 'sigc';
+}
+
+if (profile === false) {
+  const error = new Error('Profile is undefined. Please check the ENVIRONMENT variable.');
+  throw error;
+}
+
 module.exports = {
   mode: 'production',
   // node: {
   //   fs: 'empty',
   // },
   entry: {
-    [`${pjson.name}.ol.min`]: path.resolve(__dirname, '..', 'src', 'index.js'),
-    [`${pjson.name}-${pjson.version}.ol.min`]: path.resolve(__dirname, '..', 'src', 'index.js'),
+    // Asegúrate de que idee.css se procese primero al incluirlo explícitamente aquí
+    [`${pjson.name}.ol.min`]: [
+      path.resolve(__dirname, '..', 'src', 'facade', 'assets', 'css', 'idee.css'), // Añadido para cargar primero
+      path.resolve(__dirname, '..', 'src', 'index.js'),
+    ],
+    [`${pjson.name}-${pjson.version}.ol.min`]: [
+      path.resolve(__dirname, '..', 'src', 'facade', 'assets', 'css', 'idee.css'), // Añadido para cargar primero
+      path.resolve(__dirname, '..', 'src', 'index.js'),
+    ],
   },
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
@@ -70,13 +93,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: MiniCssExtractPlugin.loader,
-        exclude: /node_modules/,
-      }, {
-        test: /\.css$/,
-        loader: 'css-loader',
-        exclude: /node_modules/,
-
+        use: [MiniCssExtractPlugin.loader, {
+          loader: 'css-loader',
+          options: {
+            import: false,
+          },
+        }],
+        exclude: [/node_modules/],
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg|jpg)$/,
@@ -121,7 +144,7 @@ module.exports = {
     new CopywebpackPlugin({
       patterns: [
         {
-          from: 'src/configuration.js',
+          from: `src/configuration_${profile}.js`,
           to: `filter/configuration-${pjson.version}.js`,
         },
       ],
@@ -129,8 +152,23 @@ module.exports = {
     new CopywebpackPlugin({
       patterns: [
         {
-          from: 'src/configuration.js',
+          from: `src/configuration_${profile}.js`,
           to: 'filter/configuration.js',
+        },
+      ],
+    }),
+    new CopywebpackPlugin({
+      patterns: [
+        {
+          from: `src/facade/assets/css/{globals.css,profiles/${profile}.css}`,
+          to: 'assets/css/globals.css',
+          transformAll(assets) {
+            const combinedContent = assets.reduce((accumulator, asset) => {
+              const content = asset.data.toString();
+              return `${accumulator}${content}\n`;
+            }, '');
+            return combinedContent;
+          },
         },
       ],
     }),

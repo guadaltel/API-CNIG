@@ -11,7 +11,8 @@
   ],
   "license": "ISC",
   "scripts": {
-    "start": "webpack serve --config=webpack-config/webpack.development.config.js",
+    "start-cnig": "webpack-dev-server --config=webpack-config/webpack.development.config.js",
+    "start-sigc": "webpack-dev-server --config=webpack-config/webpack.development.config.js",
     "prebuild": "node task/create-entrypoint.js",
     "build": "webpack --config=webpack-config/webpack.production.config.js",
     "test-build": "npm run build && live-server --open=test/prod.html",

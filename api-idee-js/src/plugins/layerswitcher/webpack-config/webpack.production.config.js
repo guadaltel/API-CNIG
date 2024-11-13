@@ -5,9 +5,26 @@ const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const { option } = require('yargs');
 
 const PJSON_PATH = path.resolve(__dirname, '..', 'package.json');
 const pjson = require(PJSON_PATH);
+
+let profile = false;
+const environment = process.env.ENVIRONMENT || '';
+
+if (environment.includes('cnig')) {
+  profile = 'cnig';
+}
+
+if (environment.includes('sigc')) {
+  profile = 'sigc';
+}
+
+if (profile === false) {
+  const error = new Error('Profile is undefined. Please check the ENVIRONMENT variable.');
+  throw error;
+}
 
 module.exports = {
   mode: 'production',
@@ -56,6 +73,9 @@ module.exports = {
       }, {
         test: /\.css$/,
         loader: 'css-loader',
+        options: {
+          import: false,
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
@@ -96,6 +116,21 @@ module.exports = {
         }, {
           from: 'src/facade/assets/images',
           to: 'images',
+        },
+      ],
+    }),
+    new CopywebpackPlugin({
+      patterns: [
+        {
+          from: `src/facade/assets/css/{globals.css,profiles/${profile}.css}`,
+          to: 'globals.css',
+          transformAll(assets) {
+            const combinedContent = assets.reduce((accumulator, asset) => {
+              const content = asset.data.toString();
+              return `${accumulator}${content}\n`;
+            }, '');
+            return combinedContent;
+          },
         },
       ],
     }),

@@ -2,9 +2,25 @@ const path = require('path');
 const webpack = require('webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
+let profile = false;
+
+if (process.env.npm_lifecycle_event === 'start-cnig') {
+  profile = 'cnig';
+}
+
+if (process.env.npm_lifecycle_event === 'start-sigc') {
+  profile = 'sigc';
+}
+
+if (profile === false) {
+  const error = new Error('Profile is undefined. Use: npm start-cnig or npm start-sigc');
+  throw error;
+}
+
 module.exports = {
   mode: 'development',
   entry: [
+    path.resolve(__dirname, `../src/facade/assets/css/profiles/${profile}.css`),
     path.resolve(__dirname, '..', 'test', 'test.js'),
   ],
   resolve: {

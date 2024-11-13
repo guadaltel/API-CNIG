@@ -1,5 +1,6 @@
-/* PANEL */
+@import './globals.css';
 
+/* PANEL */
 .m-panel.m-plugin-layerswitcher {
     box-shadow: unset !important;
     background-color: transparent !important;
@@ -657,7 +658,7 @@ div.m-layerswitcher-legend>img {
 /* anadir capas */
 .m-layerswitcher-addservice {
     cursor: pointer;
-    background-color: #71a7d3;
+    background-color: var(--layerswitchers-color-primary);
     color: #fff;
     line-height: 25px;
     padding: 0 7px;

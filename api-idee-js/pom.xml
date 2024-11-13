@@ -66,6 +66,9 @@
                   <phase>generate-resources</phase>
                   <configuration>
                      <arguments>run build</arguments>
+                     <environmentVariables>
+                        <ENVIRONMENT>${environment}</ENVIRONMENT>
+                     </environmentVariables>
                   </configuration>
                </execution>
             </executions>

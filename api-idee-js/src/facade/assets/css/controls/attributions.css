@@ -9,8 +9,7 @@
 
 .m-attributions header {
     line-height: 41px;
-    background-color: #71a7d3;
-
+    background-color: var(--color-primary);
 }
 
 .attributionElements {
@@ -31,7 +30,7 @@
     font-size: 13px;
     font-weight: 700;
     margin: 0;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .m-panel.collapsed.m-panel-attributions>.m-panel-controls>#m-attributions-container {
@@ -54,14 +53,14 @@
 
 .m-attributions .m-panel-btn.g-cartografia-flecha-derecha,
 .m-attributions .m-panel-btn.g-cartografia-flecha-izquierda {
-    background-color: #71a7d3 !important;
+    background-color: var(--color-primary) !important;
     color: white !important;
 }
 
 .m-attributions.opened .m-panel-btn.g-cartografia-flecha-derecha,
 .m-attributions.opened .m-panel-btn.g-cartografia-flecha-izquierda {
     background-color: white !important;
-    color: #71a7d3 !important;
+    color: var(--color-primary) !important;
 }
 
 

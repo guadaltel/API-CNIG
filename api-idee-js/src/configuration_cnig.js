@@ -3,7 +3,6 @@
  * Version ${pom.version}
  * Date ${build.timestamp}
  */
-
 const backgroundlayersOpts = [{
   id: 'mapa',
   title: 'Callejero',
