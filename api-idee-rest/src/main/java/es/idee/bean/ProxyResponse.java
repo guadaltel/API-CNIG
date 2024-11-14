@@ -1,10 +1,10 @@
 package es.idee.bean;
 
-import org.apache.commons.httpclient.Header;
+import org.apache.http.Header;
 import org.json.JSONObject;
 
 /**
- * This class gives shape to a response retrieved by the IDEE proxy
+ * This class gives shape to a response retrieved by the idee proxy
  * 
  * @author Guadaltel S.A.
  */

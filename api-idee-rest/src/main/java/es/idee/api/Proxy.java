@@ -1,15 +1,10 @@
 package es.idee.api;
 
-  // Log4J
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.servlet.ServletContext;
@@ -21,20 +16,28 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.apache.commons.httpclient.Header;
-import org.apache.commons.httpclient.HostConfiguration;
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpException;
-import org.apache.commons.httpclient.HttpStatus;
-import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.http.Header;
+import org.apache.http.client.CredentialsProvider;
+import org.apache.http.client.HttpClient;
+import org.apache.http.HttpException;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.Credentials;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.commons.io.IOUtils;
 
+import es.guadaltel.framework.ticket.Ticket;
+import es.guadaltel.framework.ticket.TicketFactory;
 import es.idee.bean.ProxyResponse;
 import es.idee.builder.JSBuilder;
 import es.idee.exception.InvalidResponseException;
 
 /**
- * This class manages the request from IDEE and it acts as proxy to check
+ * This class manages the request from idee and it acts as proxy to check
  * security and to skip the CORS limitation
  * 
  * @author Guadaltel S.A.
@@ -47,11 +50,9 @@ public class Proxy {
 	private static final String AUTHORIZATION = "Authorization";
 	public ServletContext context_ = null;
 	private static ResourceBundle configProperties = ResourceBundle.getBundle("configuration");
-	private static final String LEGEND_ERROR = "/img/legend-error.png";
+//	private static final String THEME_URL = configProperties.getString("idee.theme.url");
+//	private static final String LEGEND_ERROR = "/img/legend-error.png";
 	private static final int IMAGE_MAX_BYTE_SIZE = Integer.parseInt(configProperties.getString("max.image.size"));
-
-  // Log4J
-	private static final Log LOG = LogFactory.getLog(Proxy.class);
 
 	/**
 	 * Proxy to execute a request to specified URL using JSONP protocol to avoid the
@@ -80,11 +81,9 @@ public class Proxy {
 			this.checkResponse(proxyResponse, url);
 		} catch (HttpException e) {
 			// TODO Auto-generated catch block
-			LOG.error(e);
 			proxyResponse = this.error(url, e);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			LOG.error(e);
 			proxyResponse = this.error(url, e);
 		}
 		response = JSBuilder.wrapCallback(proxyResponse.toJSON(), callbackFn);
@@ -125,13 +124,10 @@ public class Proxy {
 			}
 			response = Response.ok(new ByteArrayInputStream(data), contentType).build();
 		} catch (HttpException e) {
-			LOG.error(e);
 			response = Response.status(Status.BAD_REQUEST).build();
 		} catch (IOException e) {
-			LOG.error(e);
 			response = Response.status(Status.BAD_REQUEST).build();
 		} catch (InvalidResponseException e) {
-			LOG.error(e);
 			response = Response.ok(e.getLocalizedMessage()).status(Status.BAD_REQUEST).build();
 		}
 
@@ -149,34 +145,65 @@ public class Proxy {
 	 */
 	private ProxyResponse get(String url, String ticketParameter) throws HttpException, IOException {
 		ProxyResponse response = new ProxyResponse();
-		HttpClient client = new HttpClient();
-		GetMethod httpget = new GetMethod(url);
-		String proxyHost = configProperties.getString("proxy.host");
-		String proxPort = configProperties.getString("proxy.port");
-		if (proxyHost.length() > 0 && proxPort.length() > 0) {
-			HostConfiguration configuration = client.getHostConfiguration();
-			configuration.setProxy(proxyHost, Integer.parseInt(proxPort));
+
+		String host = System.getProperty("https.proxyHost");
+		HttpClientBuilder clientBuilder = HttpClientBuilder.create();
+		if (host != null) {
+			Integer port = Integer.parseInt(System.getProperty("https.proxyPort"));
+			clientBuilder.useSystemProperties();
+			String user = System.getProperty("https.proxyUser");
+			if (user != null) {
+				Credentials credentials = new UsernamePasswordCredentials(user,
+						System.getProperty("https.proxyPassword"));
+				AuthScope authScope = new AuthScope(host, port);
+				CredentialsProvider credsProvider = new BasicCredentialsProvider();
+				credsProvider.setCredentials(authScope, credentials);
+				clientBuilder.setDefaultCredentialsProvider(credsProvider);
+			}
 		}
+
+		HttpClient client = clientBuilder.build();
+		HttpGet httpget = new HttpGet(url);
+
 		// sets ticket if the user specified one
 		if (ticketParameter != null) {
+			ticketParameter = ticketParameter.trim();
+			if (!ticketParameter.isEmpty()) {
+				Ticket ticket = TicketFactory.createInstance();
+				try {
+					Map<String, String> props = ticket.getProperties(ticketParameter);
+					String user = props.get("user");
+					String pass = props.get("pass");
+					String userAndPass = user + ":" + pass;
+					String encodedLogin = new String(
+							org.apache.commons.codec.binary.Base64.encodeBase64(userAndPass.getBytes()));
+					httpget.setHeader(AUTHORIZATION, "Basic " + encodedLogin);
+				} catch (Exception e) {
+					System.out.println("-------------------------------------------");
+					System.out.println("EXCEPCTION THROWED BY PROXYREDIRECT CLASS");
+					System.out.println("METHOD: doPost");
+					System.out.println("TICKET VALUE: " + ticketParameter);
+					System.out.println("-------------------------------------------");
+				}
+			}
 		}
 
-		client.executeMethod(httpget);
+		HttpResponse httpResponse = client.execute(httpget);
 
-		int statusCode = httpget.getStatusCode();
+		int statusCode = httpResponse.getStatusLine().getStatusCode();
 		response.setStatusCode(statusCode);
 		if (statusCode == HttpStatus.SC_OK) {
 			String encoding = this.getResponseEncoding(httpget);
 			if (encoding == null) {
 				encoding = "UTF-8";
 			}
-			InputStream responseStream = httpget.getResponseBodyAsStream();
+			InputStream responseStream = httpResponse.getEntity().getContent();
 			byte[] data = IOUtils.toByteArray(responseStream);
 			response.setData(data);
 			String responseContent = new String(data, encoding);
 			response.setContent(responseContent);
 		}
-		response.setHeaders(httpget.getResponseHeaders());
+		response.setHeaders(httpResponse.getAllHeaders());
 		return response;
 	}
 
@@ -236,21 +263,18 @@ public class Proxy {
 		}
 
 		if (contentType == null) {
-			LOG.error("El content-type está vacío.");
 			throw new InvalidResponseException("El content-type está vacío.");
 		}
 
 		if (!contentType.startsWith("image/")) {
-			LOG.error("El recurso no es de tipo imagen.");
 			throw new InvalidResponseException("El recurso no es de tipo imagen.");
 		}
 
 		if (contentLength == null) {
-			LOG.error("El content-length está vacío.");
-			throw new InvalidResponseException("El content-length está vacío.");
+			contentLength = 0;
+			// throw new InvalidResponseException("El content-length está vacío.");
 		}
 		if (Proxy.IMAGE_MAX_BYTE_SIZE < contentLength) {
-			LOG.error("El recurso excede el tamaño permitido");
 			throw new InvalidResponseException("El recurso excede el tamaño permitido");
 		}
 
@@ -266,7 +290,6 @@ public class Proxy {
 		ProxyResponse proxyResponse = new ProxyResponse();
 		proxyResponse.setError(true);
 		proxyResponse.setErrorMessage(message);
-		LOG.error(message);
 		return proxyResponse;
 	}
 
@@ -277,18 +300,17 @@ public class Proxy {
 	 * @param exception Exception object
 	 */
 	private ProxyResponse error(String url, Exception exception) {
-		LOG.error(exception.getLocalizedMessage());
 		return error(url, exception.getLocalizedMessage());
 	}
 
 	/**
 	 * Gets the encoding of a response
 	 */
-	private String getResponseEncoding(GetMethod httpget) {
+	private String getResponseEncoding(HttpGet httpget) {
 		String regexp = ".*charset\\=([^;]+).*";
 		Boolean isCharset = null;
 		String encoding = null;
-		Header[] headerResponse = httpget.getResponseHeaders("Content-Type");
+		Header[] headerResponse = httpget.getHeaders("Content-Type");
 		for (Header header : headerResponse) {
 			String contentType = header.getValue();
 			if (!contentType.isEmpty()) {
