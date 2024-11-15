@@ -243,22 +243,12 @@ export const encodeWMS = (layer) => {
    MAPEO DE CAPAS TILEADA.
   ************************************ */
   // eslint-disable-next-line no-underscore-dangle
-  if (layer._updateNoCache) {
-    // eslint-disable-next-line no-underscore-dangle
-    layer._updateNoCache();
-    const noCacheName = layer.getNoCacheName();
-    const noChacheUrl = layer.getNoCacheUrl();
-    if (!M.utils.isNullOrEmpty(noCacheName) && !M.utils.isNullOrEmpty(noChacheUrl)) {
-      encodedLayer.layers = [noCacheName];
-      encodedLayer.baseURL = noChacheUrl;
-    }
-  } else {
-    const noCacheName = layer.getNoChacheName();
-    const noCacheUrl = layer.getNoChacheUrl();
-    if (!M.utils.isNullOrEmpty(noCacheName) && !M.utils.isNullOrEmpty(noCacheUrl)) {
-      encodedLayer.layers = [noCacheName];
-      encodedLayer.baseURL = noCacheUrl;
-    }
+
+  const noCacheName = layer.getNoChacheName();
+  const noCacheUrl = layer.getNoChacheUrl();
+  if (!M.utils.isNullOrEmpty(noCacheName) && !M.utils.isNullOrEmpty(noCacheUrl)) {
+    encodedLayer.layers = [noCacheName];
+    encodedLayer.baseURL = noCacheUrl;
   }
 
   /** *********************************  */

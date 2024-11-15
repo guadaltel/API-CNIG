@@ -160,8 +160,6 @@ class WMS extends LayerBase {
      * podrías experimentar problemas de alineación y visualización incorrecta.
      */
     this.useCapabilities = userParameters.useCapabilities !== false;
-
-    this._updateNoCache();
   }
 
   /**
@@ -354,28 +352,6 @@ class WMS extends LayerBase {
   }
 
   /**
-   * Devuelve las URL de "tileMappins" (url del contexto, de la configuración).
-   *
-   * @function
-   * @returns {M.config.tileMappgins.urls} Devuelve "noCacheURL".
-   * @api
-   */
-  getNoCacheUrl() {
-    return this._noCacheUrl;
-  }
-
-  /**
-   * Devuelve el nombre del "tileMappins" (nombres del contexto, de la configuración).
-   *
-   * @function
-   * @returns {M.config.tileMappgins.names} Devuelve "noCacheName".
-   * @api
-   */
-  getNoCacheName() {
-    return this._noCacheName;
-  }
-
-  /**
    * Actualización de capas WMS de resolución mínima y máxima.
    *
    * @public
@@ -387,21 +363,6 @@ class WMS extends LayerBase {
    */
   updateMinMaxResolution(projection) {
     return this.getImpl().updateMinMaxResolution(projection);
-  }
-
-  /**
-   * Actualica los parámetros de NoCahe, "M.config.tileMappins".
-   * - ⚠️ Advertencia: Este método no debe ser llamado por el usuario.
-   * @public
-   * @function
-   * @api
-   */
-  _updateNoCache() {
-    const tiledIdx = M.config.tileMappgins.tiledNames.indexOf(this.name);
-    if ((tiledIdx !== -1) && sameUrl(M.config.tileMappgins.tiledUrls[tiledIdx], this.url)) {
-      this._noCacheUrl = M.config.tileMappgins.urls[tiledIdx];
-      this._noCacheName = M.config.tileMappgins.names[tiledIdx];
-    }
   }
 
   /**

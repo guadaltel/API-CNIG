@@ -67,50 +67,6 @@ function fun(M_) {
   M_.config('TEMPLATES_PATH', '/files/templates/');
 
   /**
-   * TODO
-   * @type {object}
-   * @public
-   * @api stable
-   */
-  M_.config('tileMappgins', {
-    /**
-     * Predefined WMC URLs
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    tiledNames: 'base,SPOT_Andalucia,orto_2010-11_25830,CallejeroCompleto,orto_2010-11_23030'.split(','),
-
-    /**
-     * WMC predefined names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    tiledUrls: 'http://www.callejerodeandalucia.es/servicios/base/gwc/service/wms?,http://www.callejerodeandalucia.es/servicios/base/gwc/service/wms?,http://www.ideandalucia.es/geowebcache/service/wms?,http://www.juntadeandalucia.es/servicios/mapas/callejero/wms-tiled?,http://www.ideandalucia.es/geowebcache/service/wms?'.split(','),
-
-    /**
-     * WMC context names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    names: 'CDAU_base,mosaico_spot_2005,orto_2010-11,CallejeroCompleto,orto_2010-11'.split(','),
-
-    /**
-     * WMC context names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    urls: 'http://www.callejerodeandalucia.es/servicios/base/wms?,http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_SPOT_Andalucia_2005?,http://www.ideandalucia.es/wms/ortofoto2010?,http://www.juntadeandalucia.es/servicios/mapas/callejero/wms?,http://www.ideandalucia.es/wms/ortofoto2010?'.split(','),
-  });
-
-  /**
    * Default projection
    * @const
    * @type {string}

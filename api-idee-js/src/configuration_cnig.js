@@ -104,50 +104,6 @@ params.forEach((param) => {
   M.config('TEMPLATES_PATH', '${idee.templates.path}');
 
   /**
-   * TODO
-   * @type {object}
-   * @public
-   * @api stable
-   */
-  M.config('tileMappgins', {
-    /**
-     * Predefined WMC URLs
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    tiledNames: '${tile.mappings.tiledNames}'.split(','),
-
-    /**
-     * WMC predefined names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    tiledUrls: '${tile.mappings.tiledUrls}'.split(','),
-
-    /**
-     * WMC context names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    names: '${tile.mappings.names}'.split(','),
-
-    /**
-     * WMC context names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    urls: '${tile.mappings.urls}'.split(','),
-  });
-
-  /**
    * Default projection
    * @const
    * @type {string}
