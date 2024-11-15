@@ -104,47 +104,39 @@ params.forEach((param) => {
   M.config('TEMPLATES_PATH', '${idee.templates.path}');
 
   /**
-   * TODO
+   * Predefined WMC files. It is composed of URL,
+   * predefined name and context name.
    * @type {object}
    * @public
    * @api stable
    */
-  M.config('tileMappgins', {
+  M.config('predefinedWMC', {
     /**
-     * Predefined WMC URLs
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    tiledNames: '${tile.mappings.tiledNames}'.split(','),
+       * Predefined WMC URLs
+       * @const
+       * @type {Array<string>}
+       * @public
+       * @api stable
+       */
+    'urls': '${wmc.urls}'.split(',').map((e) => e),
 
     /**
-     * WMC predefined names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    tiledUrls: '${tile.mappings.tiledUrls}'.split(','),
+       * WMC predefined names
+       * @const
+       * @type {Array<string>}
+       * @public
+       * @api stable
+       */
+    'predefinedNames': '${wmc.predefinedNames}'.split(','),
 
     /**
-     * WMC context names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    names: '${tile.mappings.names}'.split(','),
-
-    /**
-     * WMC context names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    urls: '${tile.mappings.urls}'.split(','),
+       * WMC context names
+       * @const
+       * @type {Array<string>}
+       * @public
+       * @api stable
+       */
+    'names': '${wmc.names}'.split(','),
   });
 
   /**

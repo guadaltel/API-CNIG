@@ -67,12 +67,13 @@ function fun(M_) {
   M_.config('TEMPLATES_PATH', '/files/templates/');
 
   /**
-   * TODO
+   * Predefined WMC files. It is composed of URL,
+   * predefined name and context name.
    * @type {object}
    * @public
    * @api stable
    */
-  M_.config('tileMappgins', {
+  M_.config('predefinedWMC', {
     /**
      * Predefined WMC URLs
      * @const
@@ -80,7 +81,7 @@ function fun(M_) {
      * @public
      * @api stable
      */
-    tiledNames: 'base,SPOT_Andalucia,orto_2010-11_25830,CallejeroCompleto,orto_2010-11_23030'.split(','),
+    'urls': 'https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/context_cdau_callejero.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/context_cdau_hibrido.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/context_cdau_satelite.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/contextCallejeroCache.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/contextCallejero.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/callejero2011cache.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/ortofoto2011cache.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/hibrido2011cache.xml,https://mapea4-sigc.juntadeandalucia.es/mapea/files/wmc/contextOrtofoto.xml'.split(',').map((e) => e),
 
     /**
      * WMC predefined names
@@ -89,7 +90,7 @@ function fun(M_) {
      * @public
      * @api stable
      */
-    tiledUrls: 'http://www.callejerodeandalucia.es/servicios/base/gwc/service/wms?,http://www.callejerodeandalucia.es/servicios/base/gwc/service/wms?,http://www.ideandalucia.es/geowebcache/service/wms?,http://www.juntadeandalucia.es/servicios/mapas/callejero/wms-tiled?,http://www.ideandalucia.es/geowebcache/service/wms?'.split(','),
+    'predefinedNames': 'cdau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,callejero2011cache,ortofoto2011cache,hibrido2011cache,ortofoto'.split(','),
 
     /**
      * WMC context names
@@ -98,16 +99,7 @@ function fun(M_) {
      * @public
      * @api stable
      */
-    names: 'CDAU_base,mosaico_spot_2005,orto_2010-11,CallejeroCompleto,orto_2010-11'.split(','),
-
-    /**
-     * WMC context names
-     * @const
-     * @type {Array<string>}
-     * @public
-     * @api stable
-     */
-    urls: 'http://www.callejerodeandalucia.es/servicios/base/wms?,http://www.juntadeandalucia.es/medioambiente/mapwms/REDIAM_SPOT_Andalucia_2005?,http://www.ideandalucia.es/wms/ortofoto2010?,http://www.juntadeandalucia.es/servicios/mapas/callejero/wms?,http://www.ideandalucia.es/wms/ortofoto2010?'.split(','),
+    'names': 'Callejero,Hibrido,Satelite,mapa callejero cache,mapa del callejero,Callejero,Ortofoto,HÃ­brido,mapa ortofoto'.split(','),
   });
 
   /**
