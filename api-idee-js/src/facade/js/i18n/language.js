@@ -36,7 +36,7 @@ export const addTranslation = (lang, json) => {
 
 /**
  * Esta función te devuelve todas las traducciones disponibles
- * en la API-CORE.
+ * en la API-IDEE.
  *
  * @public
  * @function
@@ -188,7 +188,7 @@ export const getValue = (key, lang = configuration.lang) => {
 };
 
 /**
- * Esta función modifica el idioma del API-CORE.
+ * Esta función modifica el idioma del API-IDEE.
  * @public
  * @function
  * @param {string} lang Idioma.
@@ -202,7 +202,7 @@ export const setLang = (lang) => {
 };
 
 /**
- * Esta función devuelve el idioma de la API-CORE.
+ * Esta función devuelve el idioma de la API-IDEE.
  *
  * @function
  * @public
