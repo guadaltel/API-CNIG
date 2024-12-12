@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
    <artifactId>api-idee-rest</artifactId>
    <packaging>war</packaging>
-   <name>API IGN REST</name>
+   <name>API IDEE REST</name>
    <properties>
       <jersey.version>1.19</jersey.version>
       <glassfish.version>3.1.1</glassfish.version>
@@ -182,7 +182,7 @@
 		<version>2.3.23</version>
 	 </dependency>
 
-      <!-- API IGN JS -->
+      <!-- API IDEE JS -->
       <dependency>
          <groupId>${project.groupId}</groupId>
          <artifactId>api-idee-js</artifactId>
@@ -208,13 +208,13 @@
          <scope>provided</scope>
       </dependency>
 
-      <!-- API IGN PROXY -->
+      <!-- API IDEE PROXY -->
       <dependency>
          <groupId>${project.groupId}</groupId>
          <artifactId>api-idee-proxy</artifactId>
          <version>${project.version}</version>
       </dependency>
-      <!-- API IGN DATABASE -->
+      <!-- API IDEE DATABASE -->
       <dependency>
          <groupId>${project.groupId}</groupId>
          <artifactId>api-idee-database</artifactId>
