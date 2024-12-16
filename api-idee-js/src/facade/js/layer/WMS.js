@@ -4,7 +4,7 @@
  */
 import WMSImpl from 'impl/layer/WMS';
 import {
-  isUndefined, isNullOrEmpty, isFunction, isString, normalize, sameUrl,
+  isUndefined, isNullOrEmpty, isFunction, isString, normalize,
 } from '../util/Utils';
 import Exception from '../exception/exception';
 import LayerBase from './Layer';
