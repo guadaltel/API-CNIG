@@ -160,6 +160,14 @@ module.exports = {
     new CopywebpackPlugin({
       patterns: [
         {
+          from: 'src/configuration_test.js',
+          to: 'filter/configuration_test.js',
+        },
+      ],
+    }),
+    new CopywebpackPlugin({
+      patterns: [
+        {
           from: `src/facade/assets/css/{globals.css,profiles/${profile}.css}`,
           to: 'assets/css/globals.css',
           transformAll(assets) {

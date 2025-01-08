@@ -75,6 +75,7 @@
                      <filtering>true</filtering>
                      <includes>
                         <include>configuration.js</include>
+                        <include>configuration_test.js</include>
                         <include>configuration-${project.version}.js</include>
                      </includes>
                   </resource>

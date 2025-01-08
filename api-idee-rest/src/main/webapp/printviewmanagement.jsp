@@ -97,6 +97,7 @@
     <script type="text/javascript" src="vendor/browser-polyfill.js"></script>
     <script type="text/javascript" src="js/api-idee.ol.min.js"></script>
     <script type="text/javascript" src="js/configuration.js"></script>
+    <script type="text/javascript" src="js/configuration_test.js"></script>
     <script type="text/javascript" src="plugins/printviewmanagement/printviewmanagement.ol.min.js"></script>
     <script type="text/javascript" src="plugins/sharemap/sharemap.ol.min.js"></script>
     <%
@@ -114,7 +115,7 @@
         M.language.setLang(urlParams.get('language') || 'es');
 
 		const DEFAULT_serverUrl = "https://componentes.cnig.es/geoprint";
-		const DEFAULT_printStatusUrl = "https://componentes.cnig.es/geoprint/print/status";
+		const DEFAULT_printStatusUrl = CONFIGURATION.geoprint;
         
         const DEFAULT_georefImageEpsg = '{"tooltip": "Georeferenciar imagen","layers": [{"url": "http://www.ign.es/wms-inspire/mapa-raster?","name": "mtn_rasterizado","format": "image/jpeg","legend": "Mapa ETRS89 UTM"},{"url": "http://www.ign.es/wms-inspire/pnoa-ma?","name": "OI.OrthoimageCoverage","format": "image/jpeg","legend": "Imagen (PNOA) ETRS89 UTM"}]}';
         const DEFAULT_georefImage = '{"tooltip": "Georeferenciar imagen","printTemplateUrl": "https://componentes.cnig.es/geoprint/print/mapexport","printSelector": true}';
